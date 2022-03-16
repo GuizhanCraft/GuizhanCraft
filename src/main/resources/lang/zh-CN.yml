@@ -1,0 +1,12 @@
+category:
+  main: "&a鬼斩&b科技"
+
+item:
+  enhanced_ancient_altar:
+    name: "&e&l增强&d古代祭坛"
+    lore:
+      - "&a把祭坛和基座搓到一块"
+      - "&a到底还能不能用呢?"
+
+message:
+  no_permission: "&4你没有权限!"

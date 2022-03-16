@@ -45,11 +45,15 @@
                             <relocations>
                                 <relocation>
                                     <pattern>org.bstats</pattern>
-                                    <shadedPattern>net.guizhanss.guizhanslimefunaddon.bstats</shadedPattern>
+                                    <shadedPattern>net.guizhanss.guizhancraft.bstats</shadedPattern>
+                                </relocation>
+                                <relocation>
+                                    <pattern>io.github.mooy1.infinitylib</pattern>
+                                    <shadedPattern>net.guizhanss.guizhancraft.infinitylib</shadedPattern>
                                 </relocation>
                                 <relocation>
                                     <pattern>net.guizhanss.guizhanlib</pattern>
-                                    <shadedPattern>net.guizhanss.guizhanslimefunaddon.guizhanlib</shadedPattern>
+                                    <shadedPattern>net.guizhanss.guizhancraft.guizhanlib</shadedPattern>
                                 </relocation>
                             </relocations>
                         </configuration>
@@ -108,6 +112,20 @@
             <groupId>org.bstats</groupId>
             <artifactId>bstats-bukkit</artifactId>
             <version>3.0.0</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.22</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>net.guizhanss</groupId>
+            <artifactId>InfinityLib</artifactId>
+            <version>1.3.10</version>
             <scope>compile</scope>
         </dependency>
 
