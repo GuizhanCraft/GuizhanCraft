@@ -1,5 +1,6 @@
 # 简体中文 Simplified Chinese
 # author: ybw0014
+version: 1
 
 categories:
   main: "&a鬼斩&b科技"
@@ -56,4 +57,4 @@ messages:
     invalid_material: "&c背包材料无效!"
     invalid_backpack: "&c背包无效!"
     invalid_gold: "&c金锭(14克拉)无效!"
-    stacked: "&c无法升级堆叠的背包"
+    stacked: "&c无法升级堆叠的背包!"

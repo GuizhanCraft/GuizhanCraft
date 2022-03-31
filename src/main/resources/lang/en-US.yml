@@ -1,0 +1,62 @@
+# English (United States)
+# author: ybw0014
+version: 1
+
+categories:
+  main: "&aGuizhan&bCraft"
+  material: "&aGuizhan&bCraft &7- &eMaterials"
+  magic: "&aGuizhan&bCraft &7- &eMagic"
+  machine: "&aGuizhan&bCraft &7- &eMachines"
+
+items:
+  backpack_material:
+    name: "&eBackpack Material"
+    lore:
+      - "&aMaterial that are used"
+      - "&afor backpacks only"
+      - ""
+      - "&7&oNetherlands imported calfskin"
+  backpack_upgrader:
+    name: "&eBackpack Upgrader"
+    lore:
+      - "&aA machine made for a special feature"
+      - ""
+      - "&7Use backpack material and 14-carat gold"
+      - "&7to upgrade backpacks"
+  recycler:
+    name: "&eRecycler"
+    lore:
+      - "&aMade too many materials?"
+      - "&aDon't worry, just recycle them"
+  enhanced_ancient_altar:
+    name: "&e&lEnhanced &dAncient Altar"
+    lore:
+      - "&aCombines Ancient Altar and Ancient Pedestal"
+      - "&aWill it work?"
+
+researches:
+  enhanced_ancient_altar: "Enhanced Ancient Altar"
+  backpack_upgrader: "Backpack Upgrader"
+
+gui:
+  preview: "&ePreview"
+  craft: "&aClick to craft"
+  backpack_upgrader:
+    material: "&bPut &eBackpack Material &bbelow"
+    backpack: "&bPut &eBackpack &bbelow"
+    gold: "&bPut &eGold Ingot &7(14-carat) &bbelow"
+
+messages:
+  no_permission: "&4You do not have permission to do that!"
+  invalid_recipe: "&cInvalid recipe!"
+  input_all: "&cInput all required items!"
+  output_no_space: "&cOutput slots are full!"
+  crafted: "&aSuccessfully crafted &e{0}&a!"
+  enhanced_ancient_altar:
+    start: "&bInitiated the ritual of &e{0} &b..."
+    crafting: "&cThe ritual of &e{0} &cis in progress!"
+  backpack_upgrader:
+    invalid_material: "&cInvalid Backpack Material!"
+    invalid_backpack: "&cInvalid Backpack!"
+    invalid_gold: "&cInvalid Gold Ingot (14-carat)!"
+    stacked: "&cCannot upgrade stacked backpacks!"
