@@ -5,7 +5,7 @@ A Slimefun addon made by ybw0014.
 
 # Download / 下载
 
-This addon can be downloaded from Guizhan Builds page:
+This addon can be downloaded from Guizhan Builds page:  
 可以在鬼斩构建站下载该附属:
 
 [![Build status](https://builds.guizhanss.net/f/ybw0014/GuizhanCraft/master/badge.svg)](https://builds.guizhanss.net/ybw0014/GuizhanCraft/master)
