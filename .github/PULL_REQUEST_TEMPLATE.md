@@ -1,3 +1,5 @@
+<!-- We accept pull requests written in Chinese and English. -->
+<!-- 我们接受中文或英文的拉取请求 -->
 ## Description
 <!-- Please explain why you are making this pull request. -->
 <!-- Start writing below this line -->

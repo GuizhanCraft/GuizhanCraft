@@ -7,7 +7,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## 欢迎来到 问题追踪器
+        ## 欢迎来到 鬼斩科技 问题追踪器
         建议先阅读[这篇文章](https://slimefun-wiki.guizhanss.cn/How-to-report-bugs)了解如何正确地汇报Bug。
 
         <strong><i>你必须填写标注为星号（*）的表单项</i></strong>

@@ -1,3 +1,11 @@
-# 是否启用自动更新
+# Enable auto update from Guizhan Builds Page
 auto-update: true
+
+# Language file
+# loaded from "lang" folder
+## !!! Please change this before this plugin is added to live server,
+## since current Slimefun recipe system cannot recognize items with same id but different names
 lang: zh-CN
+
+# Enable research
+enable-research: true

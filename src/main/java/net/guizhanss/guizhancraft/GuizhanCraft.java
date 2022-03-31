@@ -1,37 +1,51 @@
 package net.guizhanss.guizhancraft;
 
-import io.github.mooy1.infinitylib.core.AbstractAddon;
 import lombok.Getter;
-import net.guizhanss.guizhancraft.localization.Localization;
 import net.guizhanss.guizhancraft.setup.ItemSetup;
 import net.guizhanss.guizhancraft.setup.ResearchSetup;
-import net.guizhanss.guizhanlib.updater.GuizhanBuildsUpdater;
-import org.bstats.bukkit.Metrics;
+import net.guizhanss.guizhancraft.utils.Utils;
+import net.guizhanss.guizhanlib.slimefun.addon.AbstractAddon;
+
+import java.text.MessageFormat;
+import java.util.logging.Level;
 
 public final class GuizhanCraft extends AbstractAddon {
 
     @Getter
-    private Localization localization;
+    private GuizhanCraftLocalization localization;
 
     public GuizhanCraft() {
         super("ybw0014", "GuizhanCraft", "master", "auto-update");
+        setupMetrics(14629);
     }
 
     @Override
     protected void enable() {
-        setupMetrics();
+        Utils.log(Level.INFO, "&a==================");
+        Utils.log(Level.INFO, "&a   GuizhanCraft   ");
+        Utils.log(Level.INFO, "&a      ybw0014     ");
+        Utils.log(Level.INFO, "&a==================");
 
-        localization = new Localization();
+        Utils.log(Level.INFO, "&eLoading localization service");
+        String lang = getConfig().getString("lang", "zh-CN");
+        localization = new GuizhanCraftLocalization(this);
+        localization.addLanguage(lang);
+        Utils.log(Level.INFO, MessageFormat.format("&eLoaded language {0}", lang));
 
+        Utils.log(Level.INFO, "&eSetting up items");
         ItemSetup.setup();
-        ResearchSetup.setup();
+
+        if (getConfig().getBoolean("enable-research", true)) {
+            Utils.log(Level.INFO, "&eSetting up researches");
+            ResearchSetup.setup();
+        }
     }
 
     @Override
     protected void disable() {
     }
 
-    private void setupMetrics() {
-        new Metrics(this, 14629);
+    public static GuizhanCraftLocalization getLocalizationService() {
+        return ((GuizhanCraft) getInstance()).getLocalization();
     }
 }
