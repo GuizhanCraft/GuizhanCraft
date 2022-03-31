@@ -111,7 +111,7 @@
         <dependency>
             <groupId>net.guizhanss</groupId>
             <artifactId>GuizhanLib</artifactId>
-            <version>fd1f3e015d</version>
+            <version>0.7.0</version>
             <scope>compile</scope>
         </dependency>
 
