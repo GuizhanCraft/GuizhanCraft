@@ -21,7 +21,7 @@ public final class GuizhanCraftItemGroups {
         Keys.getCategory("main"),
         new CustomItemStack(
             Utils.getHeadItem(HeadTextures.MAIN_ITEM_GROUP),
-            GuizhanCraft.getLocalizationService().getCategoryName("main")
+            GuizhanCraft.getLocalization().getCategoryName("main")
         ),
         1
     );
@@ -31,7 +31,7 @@ public final class GuizhanCraftItemGroups {
         MAIN,
         new CustomItemStack(
             Utils.getHeadItem(HeadTextures.MATERIAL_ITEM_GROUP),
-            GuizhanCraft.getLocalizationService().getCategoryName("material")
+            GuizhanCraft.getLocalization().getCategoryName("material")
         )
     );
 
@@ -49,7 +49,7 @@ public final class GuizhanCraftItemGroups {
         MAIN,
         new CustomItemStack(
             Utils.getHeadItem(HeadTextures.MACHINE_ITEM_GROUP),
-            GuizhanCraft.getLocalizationService().getCategoryName("machine")
+            GuizhanCraft.getLocalization().getCategoryName("machine")
         )
     );
 }

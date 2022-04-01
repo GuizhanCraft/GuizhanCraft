@@ -1,6 +1,5 @@
 package net.guizhanss.guizhancraft;
 
-import lombok.Getter;
 import net.guizhanss.guizhancraft.setup.ItemSetup;
 import net.guizhanss.guizhancraft.setup.ResearchSetup;
 import net.guizhanss.guizhancraft.utils.Utils;
@@ -11,7 +10,6 @@ import java.util.logging.Level;
 
 public final class GuizhanCraft extends AbstractAddon {
 
-    @Getter
     private GuizhanCraftLocalization localization;
 
     public GuizhanCraft() {
@@ -45,7 +43,7 @@ public final class GuizhanCraft extends AbstractAddon {
     protected void disable() {
     }
 
-    public static GuizhanCraftLocalization getLocalizationService() {
-        return ((GuizhanCraft) getInstance()).getLocalization();
+    public static GuizhanCraftLocalization getLocalization() {
+        return ((GuizhanCraft) getInstance()).localization;
     }
 }

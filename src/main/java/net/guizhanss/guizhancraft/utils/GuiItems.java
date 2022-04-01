@@ -11,28 +11,28 @@ public final class GuiItems {
     // region General
     public static final ItemStack PREVIEW = new CustomItemStack(
         Material.LIME_STAINED_GLASS_PANE,
-        GuizhanCraft.getLocalizationService().getString("gui.preview")
+        GuizhanCraft.getLocalization().getString("gui.preview")
     );
     public static final ItemStack CRAFT = new CustomItemStack(
         Material.CRAFTING_TABLE,
-        GuizhanCraft.getLocalizationService().getString("gui.craft")
+        GuizhanCraft.getLocalization().getString("gui.craft")
     );
     // endregion General
 
     // region BackpackUpgrader
     public static final ItemStack BACKPACK_MATERIAL_INDICATOR = new CustomItemStack(
         Material.LIME_STAINED_GLASS_PANE,
-        GuizhanCraft.getLocalizationService().getString("gui.backpack_upgrader.material")
+        GuizhanCraft.getLocalization().getString("gui.backpack_upgrader.material")
     );
 
     public static final ItemStack BACKPACK_INDICATOR = new CustomItemStack(
         Material.LIME_STAINED_GLASS_PANE,
-        GuizhanCraft.getLocalizationService().getString("gui.backpack_upgrader.backpack")
+        GuizhanCraft.getLocalization().getString("gui.backpack_upgrader.backpack")
     );
 
     public static final ItemStack BACKPACK_GOLD_INDICATOR = new CustomItemStack(
         Material.LIME_STAINED_GLASS_PANE,
-        GuizhanCraft.getLocalizationService().getString("gui.backpack_upgrader.gold")
+        GuizhanCraft.getLocalization().getString("gui.backpack_upgrader.gold")
     );
     // endregion BackpackUpgrader
 }

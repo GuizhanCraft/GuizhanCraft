@@ -52,12 +52,4 @@ public final class GuizhanCraftLocalization extends Localization {
 
         ChatUtil.send(p, MessageFormat.format(getString("messages." + messageKey), args));
     }
-
-    @ParametersAreNonnullByDefault
-    public void sendMessage(@Nonnull Player p, @Nonnull String messageKey) {
-        Validate.notNull(p, "Player cannot be null");
-        Validate.notNull(messageKey, "Message key cannot be null");
-
-        ChatUtil.send(p, getString("messages." + messageKey));
-    }
 }

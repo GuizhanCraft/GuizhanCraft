@@ -138,27 +138,27 @@ public class BackpackUpgrader extends MenuBlock {
 
         // null check
         if (material == null || backpackItem == null || gold == null) {
-            GuizhanCraft.getLocalizationService().sendMessage(p, "input_all");
+            GuizhanCraft.getLocalization().sendMessage(p, "input_all");
             return;
         }
 
         // check output slot
         if (blockMenu.getItemInSlot(OUTPUT_SLOT) != null) {
-            GuizhanCraft.getLocalizationService().sendMessage(p, "output_no_space");
+            GuizhanCraft.getLocalization().sendMessage(p, "output_no_space");
             return;
         }
 
         // validate input slots
         if (!validateMaterial(material)) {
-            GuizhanCraft.getLocalizationService().sendMessage(p, "backpack_upgrader.invalid_material");
+            GuizhanCraft.getLocalization().sendMessage(p, "backpack_upgrader.invalid_material");
             return;
         }
         if (!validateGold(gold)) {
-            GuizhanCraft.getLocalizationService().sendMessage(p, "backpack_upgrader.invalid_gold");
+            GuizhanCraft.getLocalization().sendMessage(p, "backpack_upgrader.invalid_gold");
             return;
         }
         if (!validateBackpack(backpackItem)) {
-            GuizhanCraft.getLocalizationService().sendMessage(p, "backpack_upgrader.invalid_backpack");
+            GuizhanCraft.getLocalization().sendMessage(p, "backpack_upgrader.invalid_backpack");
             return;
         }
 
@@ -166,7 +166,7 @@ public class BackpackUpgrader extends MenuBlock {
         SlimefunBackpack backpack = (SlimefunBackpack) SlimefunItem.getByItem(backpackItem);
 
         if (backpackItem.getAmount() > 1) {
-            GuizhanCraft.getLocalizationService().sendMessage(p, "backpack_upgrader.stacked");
+            GuizhanCraft.getLocalization().sendMessage(p, "backpack_upgrader.stacked");
             return;
         }
 
@@ -209,7 +209,7 @@ public class BackpackUpgrader extends MenuBlock {
         blockMenu.consumeItem(INPUT_GOLD, 1);
         blockMenu.pushItem(output.clone(), OUTPUT_SLOT);
 
-        GuizhanCraft.getLocalizationService().sendMessage(p, "crafted", output.getDisplayName());
+        GuizhanCraft.getLocalization().sendMessage(p, "crafted", output.getDisplayName());
     }
 
     private boolean validateMaterial(@Nullable ItemStack itemStack) {

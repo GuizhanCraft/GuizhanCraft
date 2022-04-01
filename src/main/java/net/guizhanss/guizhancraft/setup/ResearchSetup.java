@@ -28,7 +28,7 @@ public final class ResearchSetup {
         new Research(
             Keys.get("backpack_upgrader"),
             ++researchId,
-            GuizhanCraft.getLocalizationService().getResearchName("backpack_upgrader"),
+            GuizhanCraft.getLocalization().getResearchName("backpack_upgrader"),
             10
         )
             .addItems(GuizhanCraftItems.BACKPACK_MATERIAL, GuizhanCraftItems.BACKPACK_UPGRADER)
