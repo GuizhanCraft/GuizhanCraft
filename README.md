@@ -10,10 +10,18 @@ This addon can be downloaded from Guizhan Builds page:
 
 [![Build status](https://builds.guizhanss.net/f/ybw0014/GuizhanCraft/master/badge.svg)](https://builds.guizhanss.net/ybw0014/GuizhanCraft/master)
 
-## Content / 内容
+## Introduction / 介绍
 
 [English (United States)](/documents/intro-en-US.md)  
 [简体中文](/documents/intro-zh-CN.md)
+
+## Supported language / 支持语言
+
+You can change the language in `config.yml`. Supported languages:
+
+- English (United States) `en-US`
+- 简体中文 `zh-CN`
+- 繁體中文 `zh-TW`
 
 ## Bug report / 错误汇报
 
