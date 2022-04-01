@@ -1,6 +1,8 @@
 package net.guizhanss.guizhancraft.slimefun;
 
+import io.github.thebusybiscuit.slimefun4.api.MinecraftVersion;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
+import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 import lombok.experimental.UtilityClass;
 import net.guizhanss.guizhancraft.slimefun.itemstack.GuizhanCraftItemStack;
 import org.bukkit.Material;
@@ -20,10 +22,20 @@ public final class GuizhanCraftItems {
     // endregion Materials
 
     // region Machine
-    public static final SlimefunItemStack BACKPACK_UPGRADER = new GuizhanCraftItemStack(
-        "BACKPACK_UPGRADER",
-        Material.DEEPSLATE
-    );
+    public static final SlimefunItemStack BACKPACK_UPGRADER;
+    static {
+        if (Slimefun.getMinecraftVersion().isAtLeast(MinecraftVersion.MINECRAFT_1_17)) {
+            BACKPACK_UPGRADER = new GuizhanCraftItemStack(
+                "BACKPACK_UPGRADER",
+                Material.DEEPSLATE
+            );
+        } else {
+            BACKPACK_UPGRADER = new GuizhanCraftItemStack(
+                "BACKPACK_UPGRADER",
+                Material.ANDESITE
+            );
+        }
+    }
     public static final SlimefunItemStack RECYCLER = new GuizhanCraftItemStack(
         "RECYCLER",
         Material.PRISMARINE
