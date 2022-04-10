@@ -1,0 +1,56 @@
+---
+#简体中文 Simplified Chinese
+#author: ybw0014
+version: 1
+categories:
+  main: "&a鬼斩&b科技"
+  material: "&a鬼斩&b科技 &7- &e材料"
+  magic: "&a鬼斩&b科技 &7- &e魔法"
+  machine: "&a鬼斩&b科技 &7- &e机器"
+items:
+  backpack_material:
+    name: "&e背包材料"
+    lore:
+      - "&a专门用来制作背包的材料"
+      - ""
+      - "&7&o荷兰进口小牛皮"
+  backpack_upgrader:
+    name: "&e背包升级器"
+    lore:
+      - "&a因为某个特性而诞生的机器"
+      - ""
+      - "&7使用背包材料，14克拉金锭来升级背包"
+  recycler:
+    name: "&e回收机"
+    lore:
+      - "&a材料做多了?"
+      - "&a不用担心，回收一下就好了"
+  enhanced_ancient_altar:
+    name: "&e&l增强&d古代祭坛"
+    lore:
+      - "&a把祭坛和基座搓到一块"
+      - "&a到底还能不能用呢?"
+researches:
+  enhanced_ancient_altar: "增强古代祭坛"
+  backpack_upgrader: "背包升级"
+gui:
+  preview: "&e预览"
+  craft: "&a点击合成"
+  backpack_upgrader:
+    material: "&b在下方放入 &e背包材料"
+    backpack: "&b在下方放入 &e背包"
+    gold: "&b在下方放入 &e金锭 &7(14克拉)"
+messages:
+  no_permission: "&4你没有权限!"
+  invalid_recipe: "&c无效的配方!"
+  input_all: "&c请在所有输入栏放入物品!"
+  output_no_space: "&c输出栏已满!"
+  crafted: "&a成功合成&e{0}&a!"
+  enhanced_ancient_altar:
+    start: "&e{0} &b仪式开始..."
+    crafting: "&e{0} &c的仪式正在进行中!"
+  backpack_upgrader:
+    invalid_material: "&c背包材料无效!"
+    invalid_backpack: "&c背包无效!"
+    invalid_gold: "&c金锭(14克拉)无效!"
+    stacked: "&c无法升级堆叠的背包!"
