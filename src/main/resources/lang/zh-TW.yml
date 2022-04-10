@@ -1,13 +1,11 @@
-# 繁體中文 Traditional Chinese
-# author: ybw0014, Efina
-version: 1
-
+---
+#简体中文 Simplified Chinese
+#author: ybw0014
 categories:
   main: "&a鬼斬&b科技"
   material: "&a鬼斬&b科技 &7- &e材料"
   magic: "&a鬼斬&b科技 &7- &e魔法"
   machine: "&a鬼斬&b科技 &7- &e機器"
-
 items:
   backpack_material:
     name: "&e背包材料"
@@ -31,11 +29,9 @@ items:
     lore:
       - "&a把祭壇和基座搓到一塊"
       - "&a到底還能不能用呢?"
-
 researches:
   enhanced_ancient_altar: "增強古代祭壇"
   backpack_upgrader: "背包升級"
-
 gui:
   preview: "&e預覽"
   craft: "&a點擊合成"
@@ -43,7 +39,6 @@ gui:
     material: "&b在下方放入 &e背包材料"
     backpack: "&b在下方放入 &e背包"
     gold: "&b在下方放入 &e金錠 &7(14克拉)"
-
 messages:
   no_permission: "&4你沒有權限!"
   invalid_recipe: "&c無效的配方!"
