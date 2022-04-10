@@ -1,19 +1,16 @@
-# English (United States)
-# author: ybw0014
-version: 1
-
+---
+#简体中文 Simplified Chinese
+#author: ybw0014
 categories:
   main: "&aGuizhan&bCraft"
   material: "&aGuizhan&bCraft &7- &eMaterials"
   magic: "&aGuizhan&bCraft &7- &eMagic"
   machine: "&aGuizhan&bCraft &7- &eMachines"
-
 items:
   backpack_material:
     name: "&eBackpack Material"
     lore:
-      - "&aMaterial that are used"
-      - "&afor backpacks only"
+      - "&aMaterial that are used for backpacks"
       - ""
       - "&7&oNetherlands imported calfskin"
   backpack_upgrader:
@@ -21,8 +18,7 @@ items:
     lore:
       - "&aA machine made for a special feature"
       - ""
-      - "&7Use backpack material and 14-carat gold"
-      - "&7to upgrade backpacks"
+      - "&7Use backpack material and 14-carat gold to upgrade"
   recycler:
     name: "&eRecycler"
     lore:
@@ -33,11 +29,9 @@ items:
     lore:
       - "&aCombines Ancient Altar and Ancient Pedestal"
       - "&aWill it work?"
-
 researches:
   enhanced_ancient_altar: "Enhanced Ancient Altar"
   backpack_upgrader: "Backpack Upgrader"
-
 gui:
   preview: "&ePreview"
   craft: "&aClick to craft"
@@ -45,7 +39,6 @@ gui:
     material: "&bPut &eBackpack Material &bbelow"
     backpack: "&bPut &eBackpack &bbelow"
     gold: "&bPut &eGold Ingot &7(14-carat) &bbelow"
-
 messages:
   no_permission: "&4You do not have permission to do that!"
   invalid_recipe: "&cInvalid recipe!"
