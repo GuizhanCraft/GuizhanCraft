@@ -47,6 +47,10 @@
                                     <pattern>net.guizhanss.guizhanlib</pattern>
                                     <shadedPattern>net.guizhanss.guizhancraft.libs.guizhanlib</shadedPattern>
                                 </relocation>
+                                <relocation>
+                                    <pattern>co.aikar.commands</pattern>
+                                    <shadedPattern>net.guizhanss.guizhancraft.libs.acf</shadedPattern>
+                                </relocation>
                             </relocations>
                         </configuration>
                     </execution>
@@ -78,6 +82,10 @@
         <repository>
             <id>jitpack.io</id>
             <url>https://jitpack.io</url>
+        </repository>
+        <repository>
+            <id>aikar</id>
+            <url>https://repo.aikar.co/content/groups/aikar/</url>
         </repository>
     </repositories>
 
@@ -111,9 +119,14 @@
         <dependency>
             <groupId>net.guizhanss</groupId>
             <artifactId>GuizhanLib</artifactId>
-            <version>5bf144c919</version>
+            <version>0.8.3</version>
             <scope>compile</scope>
         </dependency>
 
+        <dependency>
+            <groupId>co.aikar</groupId>
+            <artifactId>acf-paper</artifactId>
+            <version>0.5.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 </project>

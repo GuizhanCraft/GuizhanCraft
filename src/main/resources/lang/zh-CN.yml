@@ -1,6 +1,6 @@
 # 简体中文 Simplified Chinese
 # author: ybw0014
-version: 1
+version: 2
 
 categories:
   main: "&a鬼斩&b科技"
@@ -46,6 +46,7 @@ gui:
 
 messages:
   no_permission: "&4你没有权限!"
+  no_console: "&4只有玩家才能执行该指令!"
   invalid_recipe: "&c无效的配方!"
   input_all: "&c请在所有输入栏放入物品!"
   output_no_space: "&c输出栏已满!"
@@ -58,3 +59,7 @@ messages:
     invalid_backpack: "&c背包无效!"
     invalid_gold: "&c金锭(14克拉)无效!"
     stacked: "&c无法升级堆叠的背包!"
+
+commands:
+  usage: "&e"
+  sfspawner: "&e用法: &7/sfspawner "
