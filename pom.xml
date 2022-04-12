@@ -119,14 +119,8 @@
         <dependency>
             <groupId>net.guizhanss</groupId>
             <artifactId>GuizhanLib</artifactId>
-            <version>0.8.3</version>
+            <version>5d84c57498</version>
             <scope>compile</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>co.aikar</groupId>
-            <artifactId>acf-paper</artifactId>
-            <version>0.5.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 </project>
