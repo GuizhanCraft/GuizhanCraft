@@ -23,7 +23,7 @@ public class SfSpanwerCommand implements CommandExecutor {
     @Override
     @ParametersAreNonnullByDefault
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if (!sender.isOp() && !sender.hasPermission("guizhancraft.sfspawner")) {
+        if (!sender.isOp() && !sender.hasPermission("guizhancraft.commands.sfspawner")) {
             GuizhanCraft.getLocalization().sendMessage(sender, "no_permission");
             return true;
         }
