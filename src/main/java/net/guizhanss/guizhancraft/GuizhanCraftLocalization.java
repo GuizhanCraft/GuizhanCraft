@@ -46,18 +46,15 @@ public final class GuizhanCraftLocalization extends Localization {
     }
 
     @ParametersAreNonnullByDefault
-    public void sendMessage(CommandSender sender, String messageKey, Object... args) {
-        Validate.notNull(sender, "CommandSender cannot be null");
-        Validate.notNull(messageKey, "Message key cannot be null");
-
-        ChatUtil.send(sender, MessageFormat.format(getString("messages." + messageKey), args));
-    }
-
-    @ParametersAreNonnullByDefault
     public void send(CommandSender sender, String key, Object... args) {
         Validate.notNull(sender, "CommandSender cannot be null");
         Validate.notNull(key, "Message key cannot be null");
 
         ChatUtil.send(sender, MessageFormat.format(getString(key), args));
+    }
+
+    @ParametersAreNonnullByDefault
+    public void sendMessage(CommandSender sender, String messageKey, Object... args) {
+        send(sender, "messages." + messageKey, args);
     }
 }
