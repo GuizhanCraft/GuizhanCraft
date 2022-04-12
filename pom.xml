@@ -47,10 +47,6 @@
                                     <pattern>net.guizhanss.guizhanlib</pattern>
                                     <shadedPattern>net.guizhanss.guizhancraft.libs.guizhanlib</shadedPattern>
                                 </relocation>
-                                <relocation>
-                                    <pattern>co.aikar.commands</pattern>
-                                    <shadedPattern>net.guizhanss.guizhancraft.libs.acf</shadedPattern>
-                                </relocation>
                             </relocations>
                         </configuration>
                     </execution>
@@ -82,10 +78,6 @@
         <repository>
             <id>jitpack.io</id>
             <url>https://jitpack.io</url>
-        </repository>
-        <repository>
-            <id>aikar</id>
-            <url>https://repo.aikar.co/content/groups/aikar/</url>
         </repository>
     </repositories>
 
