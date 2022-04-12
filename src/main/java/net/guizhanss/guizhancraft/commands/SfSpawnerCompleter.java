@@ -8,10 +8,10 @@ import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class SfSpawnerCompleter implements TabCompleter {
     @Override
@@ -29,6 +29,6 @@ public class SfSpawnerCompleter implements TabCompleter {
                 .map(EntityType::toString)
                 .collect(Collectors.toList());
         }
-        return null;
+        return new ArrayList<>();
     }
 }
