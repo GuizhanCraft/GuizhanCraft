@@ -36,6 +36,7 @@ public final class GuizhanCraftItems {
             );
         }
     }
+
     public static final SlimefunItemStack RECYCLER = new GuizhanCraftItemStack(
         "RECYCLER",
         Material.PRISMARINE

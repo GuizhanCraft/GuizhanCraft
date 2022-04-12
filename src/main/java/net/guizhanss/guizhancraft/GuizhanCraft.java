@@ -1,12 +1,11 @@
 package net.guizhanss.guizhancraft;
 
+import net.guizhanss.guizhancraft.setup.CommandSetup;
 import net.guizhanss.guizhancraft.setup.ItemSetup;
 import net.guizhanss.guizhancraft.setup.ResearchSetup;
-import net.guizhanss.guizhancraft.utils.Utils;
 import net.guizhanss.guizhanlib.slimefun.addon.AbstractAddon;
 
 import java.text.MessageFormat;
-import java.util.logging.Level;
 
 public final class GuizhanCraft extends AbstractAddon {
 
@@ -19,22 +18,25 @@ public final class GuizhanCraft extends AbstractAddon {
 
     @Override
     protected void enable() {
-        Utils.log(Level.INFO, "&a==================");
-        Utils.log(Level.INFO, "&a   GuizhanCraft   ");
-        Utils.log(Level.INFO, "&a      ybw0014     ");
-        Utils.log(Level.INFO, "&a==================");
+        sendConsole("&a==================");
+        sendConsole("&a   GuizhanCraft   ");
+        sendConsole("&a      ybw0014     ");
+        sendConsole("&a==================");
 
-        Utils.log(Level.INFO, "&eLoading localization service");
+        sendConsole("&eLoading localization service");
         String lang = getConfig().getString("lang", "zh-CN");
         localization = new GuizhanCraftLocalization(this);
         localization.addLanguage(lang);
-        Utils.log(Level.INFO, MessageFormat.format("&eLoaded language {0}", lang));
+        sendConsole(MessageFormat.format("&eLoaded language {0}", lang));
 
-        Utils.log(Level.INFO, "&eSetting up items");
+        sendConsole("&eSetting up items");
         ItemSetup.setup();
 
+        sendConsole("&eSetting up commands");
+        CommandSetup.setup();
+
         if (getConfig().getBoolean("enable-research", true)) {
-            Utils.log(Level.INFO, "&eSetting up researches");
+            sendConsole("&eSetting up researches");
             ResearchSetup.setup();
         }
     }

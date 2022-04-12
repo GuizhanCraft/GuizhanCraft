@@ -5,3 +5,8 @@ api-version: 1.14
 depend: [ Slimefun ]
 authors: [ ybw0014 ]
 description: A Slimefun Addon
+commands:
+  sfspawner:
+    description: /sfspawner
+    usage: /sfspawner <sub>
+    aliases: [ sfs ]
