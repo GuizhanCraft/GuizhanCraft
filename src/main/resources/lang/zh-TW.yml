@@ -1,5 +1,5 @@
 # 繁體中文 Traditional Chinese
-# author: ybw0014, Efina
+# author: ybw0014, Efina, Hyuk
 categories:
   main: "&a鬼斬&b科技"
   material: "&a鬼斬&b科技 &7- &e材料"
@@ -44,6 +44,9 @@ gui:
 
 messages:
   no_permission: "&4你沒有權限!"
+  no_console: "&4只有玩家才能執行該指令!"
+  usage: "&e用法: &a{0}"
+  player_not_found: "&c找不到指定的玩家 {0}!"
   invalid_recipe: "&c無效的配方!"
   input_all: "&c請在所有輸入欄放入物品!"
   output_no_space: "&c輸出欄已滿!"
@@ -56,3 +59,16 @@ messages:
     invalid_backpack: "&c背包無效!"
     invalid_gold: "&c金錠 (14克拉) 無效!"
     stacked: "&c無法升級堆疊的背包!"
+    
+commands:
+  sfspawner:
+    invalid_entity_type: "&c無效的生物類型: {0}"
+    sent: "&b{0} &a已獲得 &b{1}"
+    received: "&a你收到來自 &b{0} &a的 &b{1}"
+    broken:
+      usage: "&b/sfs broken <玩家名稱> <生物類型>"
+      description: "&a給予指定玩家指定類型的損壞生怪磚"
+    repaired:
+      usage: "&b/sfs repaired <玩家名稱> <生物類型>"
+      description: "&a給予指定玩家指定類型的已修復的生怪磚"
+
