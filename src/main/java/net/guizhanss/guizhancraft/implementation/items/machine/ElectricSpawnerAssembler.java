@@ -28,6 +28,7 @@ import net.guizhanss.guizhancraft.implementation.GuizhanCraftItems;
 import net.guizhanss.guizhancraft.utils.Debug;
 import net.guizhanss.guizhancraft.utils.GuiItems;
 import net.guizhanss.guizhancraft.utils.Utils;
+import net.guizhanss.guizhanlib.minecraft.helper.inventory.ItemStackHelper;
 import net.guizhanss.guizhanlib.slimefun.machines.MenuBlock;
 
 /**
@@ -109,9 +110,10 @@ public class ElectricSpawnerAssembler extends MenuBlock {
 
     private void manualCraft(@Nonnull BlockMenu blockMenu, @Nonnull Player p) {
         if (craft(blockMenu)) {
-            GuizhanCraft.getLocalization().sendMessage(p, "success");
+            String itemName = ItemStackHelper.getDisplayName(blockMenu.getItemInSlot(OUTPUT_SLOT));
+            GuizhanCraft.getLocalization().sendMessage(p, "crafted", itemName);
         } else {
-            GuizhanCraft.getLocalization().sendMessage(p, "failed");
+            GuizhanCraft.getLocalization().sendMessage(p, "not-crafted");
         }
     }
 

@@ -50,6 +50,7 @@ messages:
   no-input: "&c请在所有输入栏放入物品!"
   no-output-space: "&c输出空间不足!"
   crafted: "&a成功合成&e{0}&a!"
+  not-crafted: "&c合成失败:&e{0}&c!"
 
 console:
   loaded_language: "当前语言为简体中文!"

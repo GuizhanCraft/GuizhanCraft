@@ -47,9 +47,10 @@ messages:
   usage: "&eUsage: &a{0}"
   player-not-found: "&cCannot find player {0}!"
   invalid-recipe: "&cInvalid recipe!"
-  no-input: "&c请在所有输入栏放入物品!"
-  no-output-space: "&c输出空间不足!"
+  no-input: "&cInsufficient input materials!"
+  no-output-space: "&cNot enough output space!"
   crafted: "&aSuccessfully crafted &e{0}&a!"
+  not-crafted: "&cFailed to craft: &e{0}&c!"
 
 console:
   loaded_language: "Current language is English (United States)!"
