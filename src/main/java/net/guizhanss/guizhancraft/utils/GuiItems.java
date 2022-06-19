@@ -17,14 +17,16 @@ import lombok.experimental.UtilityClass;
 @UtilityClass
 public final class GuiItems {
 
+    // @formatter:off
     private static final Map<String, ItemStack> STATUS_ITEMS = new HashMap<>();
+    // @formatter:on
 
     // region General
     public static final ItemStack CRAFT = new CustomItemStack(
         Material.CRAFTING_TABLE,
         GuizhanCraft.getLocalization().getString("gui.craft")
     );
-    // endregion General
+    // endregion
 
     // region Electric Spawner Assembler
     public static final ItemStack ELECTRIC_SPAWNER_ASSEMBLER_INFO = new CustomItemStack(
@@ -32,7 +34,7 @@ public final class GuiItems {
         GuizhanCraft.getLocalization().getString("gui.electric_spawner_assembler.info.name"),
         GuizhanCraft.getLocalization().getStringList("gui.electric_spawner_assembler.info.lore")
     );
-    // endregion  Electric Spawner Assembler
+    // endregion
 
     @Nonnull
     public static ItemStack getStatus(@Nonnull String key, boolean success) {

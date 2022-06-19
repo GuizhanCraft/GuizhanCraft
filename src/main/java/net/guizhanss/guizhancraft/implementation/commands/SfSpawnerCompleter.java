@@ -20,7 +20,7 @@ public final class SfSpawnerCompleter implements TabCompleter {
     public List<String> onTabComplete(CommandSender sender, Command command, String label, String[] args) {
         if (args.length == 1) {
             // Sub command
-            String[] subcommands = { "broken", "repaired" };
+            String[] subcommands = {"broken", "repaired"};
             return Arrays.asList(subcommands);
         } else if (args.length == 2) {
             // Player name

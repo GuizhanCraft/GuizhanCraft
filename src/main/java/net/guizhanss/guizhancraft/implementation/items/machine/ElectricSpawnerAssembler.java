@@ -82,12 +82,12 @@ public class ElectricSpawnerAssembler extends MenuBlock {
 
     @Override
     protected int[] getInputSlots() {
-        return new int[] { INPUT_FRAMEWORK_SLOT, INPUT_SPAWNER_SLOT };
+        return new int[] {INPUT_FRAMEWORK_SLOT, INPUT_SPAWNER_SLOT};
     }
 
     @Override
     protected int[] getOutputSlots() {
-        return new int[] { OUTPUT_SLOT };
+        return new int[] {OUTPUT_SLOT};
     }
 
     @Override

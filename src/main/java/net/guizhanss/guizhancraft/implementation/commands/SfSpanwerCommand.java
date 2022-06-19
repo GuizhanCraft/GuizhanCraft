@@ -22,8 +22,9 @@ import net.guizhanss.guizhanlib.utils.InventoryUtil;
 
 /**
  * {@link CommandExecutor} for /sfspawner
- *
+ * <p>
  * TODO: rewrite when AddonCommand is published
+ *
  * @author ybw0014
  */
 public class SfSpanwerCommand implements CommandExecutor {
@@ -77,5 +78,4 @@ public class SfSpanwerCommand implements CommandExecutor {
         GuizhanCraft.getLocalization().send(sender, "commands.sfspawner.sent", target.getName(), ItemStackHelper.getDisplayName(spawner));
         GuizhanCraft.getLocalization().send(target, "commands.sfspawner.received", sender.getName(), ItemStackHelper.getDisplayName(spawner));
     }
-
 }

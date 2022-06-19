@@ -32,6 +32,23 @@ public final class GuizhanCraft extends AbstractAddon {
         enableMetrics(14629);
     }
 
+    @Nonnull
+    private static GuizhanCraft inst() {
+        return getInstance();
+    }
+
+    @Nonnull
+    public static LocalizationService getLocalization() {
+        return inst().localization;
+    }
+
+    @ParametersAreNonnullByDefault
+    public static void debug(String message, Object... args) {
+        if (inst().isDebugEnabled) {
+            GuizhanCraft.log(Level.WARNING, "[DEBUG] " + message, args);
+        }
+    }
+
     @Override
     protected void enable() {
         sendConsole("&a==================");
@@ -92,24 +109,7 @@ public final class GuizhanCraft extends AbstractAddon {
     }
 
     @Nonnull
-    private static GuizhanCraft inst() {
-        return getInstance();
-    }
-
-    @Nonnull
-    public static LocalizationService getLocalization() {
-        return inst().localization;
-    }
-
-    @Nonnull
     public IntegrationsManager getIntegrationManager() {
         return integrations;
-    }
-
-    @ParametersAreNonnullByDefault
-    public static void debug(String message, Object... args) {
-        if (inst().isDebugEnabled) {
-            GuizhanCraft.log(Level.WARNING, "[DEBUG] " + message, args);
-        }
     }
 }
