@@ -13,7 +13,7 @@ import net.guizhanss.guizhanlib.utils.PlayerHeadUtil;
 import lombok.experimental.UtilityClass;
 
 /**
- * This class holds all {@link ItemGroup} for GuizhanCraft
+ * This class holds all {@link ItemGroup} for GuizhanCraft.
  *
  * @author ybw0014
  */
@@ -22,7 +22,7 @@ final class GuizhanCraftItemGroups {
     public static final NestedItemGroup MAIN = new NestedItemGroup(
         Keys.getCategory("main"),
         new CustomItemStack(
-            PlayerHeadUtil.getFromBase64(HeadTextures.MAIN_ITEM_GROUP),
+            PlayerHeadUtil.getFromHash(HeadTextures.MAIN_ITEM_GROUP),
             GuizhanCraft.getLocalization().getCategoryName("main")
         ),
         1
@@ -32,7 +32,7 @@ final class GuizhanCraftItemGroups {
         Keys.getCategory("material"),
         MAIN,
         new CustomItemStack(
-            PlayerHeadUtil.getFromBase64(HeadTextures.MATERIAL_ITEM_GROUP),
+            PlayerHeadUtil.getFromHash(HeadTextures.MATERIAL_ITEM_GROUP),
             GuizhanCraft.getLocalization().getCategoryName("material")
         )
     );
@@ -50,7 +50,7 @@ final class GuizhanCraftItemGroups {
         Keys.getCategory("machine"),
         MAIN,
         new CustomItemStack(
-            PlayerHeadUtil.getFromBase64(HeadTextures.MACHINE_ITEM_GROUP),
+            PlayerHeadUtil.getFromHash(HeadTextures.MACHINE_ITEM_GROUP),
             GuizhanCraft.getLocalization().getCategoryName("machine")
         )
     );
