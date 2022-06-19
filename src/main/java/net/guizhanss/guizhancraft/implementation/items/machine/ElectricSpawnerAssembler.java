@@ -25,6 +25,7 @@ import me.mrCookieSlime.Slimefun.api.inventory.BlockMenuPreset;
 
 import net.guizhanss.guizhancraft.implementation.GuizhanCraft;
 import net.guizhanss.guizhancraft.implementation.GuizhanCraftItems;
+import net.guizhanss.guizhancraft.utils.Debug;
 import net.guizhanss.guizhancraft.utils.GuiItems;
 import net.guizhanss.guizhancraft.utils.Utils;
 import net.guizhanss.guizhanlib.slimefun.machines.MenuBlock;
@@ -44,7 +45,7 @@ public class ElectricSpawnerAssembler extends MenuBlock {
 
     // gui
     private static final int[] BACKGROUND = {
-        0, 4, 8, 9, 17, 18, 22, 26,
+        0, 4, 8, 9, 17, 18, 20, 26,
         27, 28, 29, 33, 34, 35,
         36, 37, 38, 42, 43, 44,
         45, 46, 47, 51, 52, 53
@@ -60,7 +61,7 @@ public class ElectricSpawnerAssembler extends MenuBlock {
     private static final int OUTPUT_SLOT = 40;
     private static final int STATUS_SLOT = 4;
     private static final int INFO_SLOT = 13;
-    private static final int CRAFT_BUTTON = 20;
+    private static final int CRAFT_BUTTON = 22;
 
     public ElectricSpawnerAssembler(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
         super(itemGroup, item, recipeType, recipe);
@@ -131,6 +132,8 @@ public class ElectricSpawnerAssembler extends MenuBlock {
             return false;
         }
 
+        Debug.log("Got entity type");
+
         EntityType type = entityType.get();
 
         SlimefunItem electricSpawner = SlimefunItem.getById("ELECTRIC_SPAWNER_" + type);
@@ -138,32 +141,41 @@ public class ElectricSpawnerAssembler extends MenuBlock {
             return false;
         }
 
+        Debug.log("Got electric spawner");
+
         if (Utils.checkItemStack(output) && !SlimefunUtils.isItemSimilar(output, electricSpawner.getItem(), false, false)) {
             return false;
         }
 
+        Debug.log("Output slot is available");
+
         blockMenu.consumeItem(INPUT_FRAMEWORK_SLOT, 1);
         blockMenu.consumeItem(INPUT_SPAWNER_SLOT, 1);
-        blockMenu.pushItem(electricSpawner.getItem(), OUTPUT_SLOT);
+        blockMenu.pushItem(electricSpawner.getItem().clone(), OUTPUT_SLOT);
 
         return true;
     }
 
     @ParametersAreNullableByDefault
     private boolean validateInput(ItemStack framework, ItemStack spawner) {
+        Debug.log("Start input validation!");
         // Check framework
         if (!Utils.checkItemStack(framework)) {
             return false;
         }
-        if (!SlimefunUtils.isItemSimilar(framework, GuizhanCraftItems.ELECTRIC_SPAWNER_ASSEMBLER, true, false)) {
+        if (!SlimefunUtils.isItemSimilar(framework, GuizhanCraftItems.ELECTRIC_SPAWNER_FRAMEWORK, true, false)) {
             return false;
         }
+
+        Debug.log("Checked framework!");
 
         // Check spawner
         if (!Utils.checkItemStack(spawner)) {
             return false;
         }
+
         SlimefunItem repairedSpawner = SlimefunItem.getByItem(spawner);
+        Debug.log("Is RepairedSpawner? " + (repairedSpawner instanceof RepairedSpawner));
         return repairedSpawner instanceof RepairedSpawner;
     }
 }

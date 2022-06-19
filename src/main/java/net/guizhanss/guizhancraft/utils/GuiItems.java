@@ -28,7 +28,7 @@ public final class GuiItems {
 
     // region Electric Spawner Assembler
     public static final ItemStack ELECTRIC_SPAWNER_ASSEMBLER_INFO = new CustomItemStack(
-        Material.CRAFTING_TABLE,
+        Material.PAPER,
         GuizhanCraft.getLocalization().getString("gui.electric_spawner_assembler.info.name"),
         GuizhanCraft.getLocalization().getStringList("gui.electric_spawner_assembler.info.lore")
     );

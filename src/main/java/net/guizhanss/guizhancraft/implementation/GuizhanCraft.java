@@ -1,6 +1,9 @@
 package net.guizhanss.guizhancraft.implementation;
 
+import java.util.logging.Level;
+
 import javax.annotation.Nonnull;
+import javax.annotation.ParametersAreNonnullByDefault;
 
 import org.bukkit.configuration.Configuration;
 
@@ -15,6 +18,8 @@ import net.guizhanss.guizhanlib.slimefun.addon.AddonConfig;
 public final class GuizhanCraft extends AbstractAddon {
 
     private static final String DEFAULT_LANG = "zh-CN";
+
+    private boolean isDebugEnabled = false;
 
     // Services
     private LocalizationService localization;
@@ -45,6 +50,11 @@ public final class GuizhanCraft extends AbstractAddon {
             }
             config.set("version", 2);
             config.save();
+        }
+
+        // Debug
+        if (config.getBoolean("debug")) {
+            isDebugEnabled = true;
         }
 
         // Localization
@@ -94,5 +104,12 @@ public final class GuizhanCraft extends AbstractAddon {
     @Nonnull
     public IntegrationsManager getIntegrationManager() {
         return integrations;
+    }
+
+    @ParametersAreNonnullByDefault
+    public static void debug(String message, Object... args) {
+        if (inst().isDebugEnabled) {
+            GuizhanCraft.log(Level.WARNING, "[DEBUG] " + message, args);
+        }
     }
 }

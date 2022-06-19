@@ -1,6 +1,9 @@
 # DO NOT change this
 version: 2
 
+# Debug mode
+debug: false
+
 # Enable auto update from Guizhan Builds Page
 auto-update: true
 
@@ -12,3 +15,5 @@ lang: zh-CN
 
 # Enable researches
 enable-researches: true
+
+

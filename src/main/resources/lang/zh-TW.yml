@@ -7,68 +7,70 @@ categories:
   machine: "&a鬼斬&b科技 &7- &e機器"
 
 items:
-  backpack_material:
-    name: "&e背包材料"
+  electric_spawner_framework:
+    name: "&e電力刷怪籠框架"
     lore:
-      - "&a專門用來製作背包的材料"
+      - "&7好像差了點什麽..."
+  electric_spawner_assembler:
+    name: "&e電力刷怪籠&a組裝機"
+    lore:
+      - "&7可以用電力刷怪籠框架"
+      - "&7和已修復的刷怪籠"
+      - "&7組裝電力刷怪籠"
       - ""
-      - "&7&o荷蘭進口小牛皮"
-  backpack_upgrader:
-    name: "&e背包升級器"
-    lore:
-      - "&a因為某個特性而誕生的機器"
-      - ""
-      - "&7使用背包材料，金錠14克拉來升級背包"
-  recycler:
-    name: "&e回收機"
-    lore:
-      - "&a材料做多了?"
-      - "&a不用擔心，回收一下就好了"
-  enhanced_ancient_altar:
-    name: "&e&l增強&d古代祭壇"
-    lore:
-      - "&a把祭壇和基座搓到一塊"
-      - "&a到底還能不能用呢?"
+      - "&7可進行不消耗電力的手動合成"
+
+lores:
+  per-craft: "&7每次合成"
+  per-use: "&7每次使用"
 
 researches:
-  enhanced_ancient_altar: "增強古代祭壇"
-  backpack_upgrader: "背包升級"
+  electric_spawner_assembler: "電力刷怪籠組裝機"
 
 gui:
-  preview: "&e預覽"
   craft: "&a點擊合成"
-  backpack_upgrader:
-    material: "&b在下方放入 &e背包材料"
-    backpack: "&b在下方放入 &e背包"
-    gold: "&b在下方放入 &e金錠 &7(14克拉)"
+  not-enough-energy: "&c電力不足"
+  no-input: "&c缺少輸入"
+  no-output-space: "&c輸出空間不足"
+  success: "&a成功!"
+  electric_spawner_assembler:
+    info:
+      name: "&e說明"
+      lore:
+        - "&7在左側放入&e電力刷怪籠框架"
+        - "&7在右側放入&e已修復的刷怪籠"
+        - ""
+        - "&7點擊下方的按鈕可手動合成一次"
+        - "&7(無需電力)"
 
 messages:
-  no_permission: "&4你沒有權限!"
-  no_console: "&4只有玩家才能執行該指令!"
+  no-permission: "&4你沒有權限!"
+  no-console: "&4只有玩家才能執行該指令!"
   usage: "&e用法: &a{0}"
-  player_not_found: "&c找不到指定的玩家 {0}!"
-  invalid_recipe: "&c無效的配方!"
-  input_all: "&c請在所有輸入欄放入物品!"
-  output_no_space: "&c輸出欄已滿!"
+  player-not-found: "&c找不到指定玩家 {0}!"
+  invalid-recipe: "&c無效的配方!"
+  no-input: "&c請在所有輸入欄放入物品!"
+  no-output-space: "&c輸出空間不足!"
   crafted: "&a成功合成&e{0}&a!"
-  enhanced_ancient_altar:
-    start: "&e{0} &b儀式開始..."
-    crafting: "&e{0} &c的儀式正在進行中!"
-  backpack_upgrader:
-    invalid_material: "&c背包材料無效!"
-    invalid_backpack: "&c背包無效!"
-    invalid_gold: "&c金錠 (14克拉) 無效!"
-    stacked: "&c無法升級堆疊的背包!"
-    
+
+console:
+  loaded_language: "當前語言為繁體中文!"
+  loading_items: "加載物品中..."
+  loading_commands: "加載指令中..."
+  loading_researches: "研究已啟用, 加載研究中..."
+  loading_integrations: "加載關聯插件中..."
+  loading_integration: "正在關聯插件 {0}"
+  loaded_integration: "已關聯插件 {0} v{1}"
+
 commands:
   sfspawner:
-    invalid_entity_type: "&c無效的生物類型: {0}"
+    invalid-entity-type: "&c無效的生物類型: {0}"
     sent: "&b{0} &a已獲得 &b{1}"
-    received: "&a你收到來自 &b{0} &a的 &b{1}"
+    received: "&a你收到了來自 &b{0} &a的 &b{1}"
     broken:
       usage: "&b/sfs broken <玩家名稱> <生物類型>"
-      description: "&a給予指定玩家指定類型的損壞生怪磚"
+      description: "&a給予指定玩家指定類型的破損刷怪籠"
     repaired:
       usage: "&b/sfs repaired <玩家名稱> <生物類型>"
-      description: "&a給予指定玩家指定類型的已修復的生怪磚"
+      description: "&a給予指定玩家指定類型的已修復的刷怪籠"
 

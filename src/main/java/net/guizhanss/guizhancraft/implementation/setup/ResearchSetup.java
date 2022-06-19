@@ -4,6 +4,7 @@ import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.researches.Research;
 
 import net.guizhanss.guizhancraft.implementation.GuizhanCraft;
+import net.guizhanss.guizhancraft.implementation.GuizhanCraftItems;
 import net.guizhanss.guizhancraft.utils.Keys;
 
 import lombok.experimental.UtilityClass;
@@ -23,7 +24,7 @@ public final class ResearchSetup {
     }
 
     public static void setupElectricSpawners() {
-
+        addResearch("electric_spawner_assembler", 5, GuizhanCraftItems.ELECTRIC_SPAWNER_FRAMEWORK, GuizhanCraftItems.ELECTRIC_SPAWNER_ASSEMBLER);
     }
 
     private static void addResearch(String key, int cost, SlimefunItemStack... items) {
