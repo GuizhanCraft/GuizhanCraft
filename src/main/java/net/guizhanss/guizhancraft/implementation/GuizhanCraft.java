@@ -1,25 +1,25 @@
 package net.guizhanss.guizhancraft.implementation;
 
-import net.guizhanss.guizhancraft.integrations.IntegrationsManager;
-
-import net.guizhanss.guizhancraft.implementation.setup.CommandSetup;
-import net.guizhanss.guizhancraft.implementation.setup.ResearchSetup;
+import javax.annotation.Nonnull;
 
 import org.bukkit.configuration.Configuration;
 
+import net.guizhanss.guizhancraft.core.services.LocalizationService;
+import net.guizhanss.guizhancraft.implementation.setup.CommandSetup;
+import net.guizhanss.guizhancraft.implementation.setup.ItemSetup;
+import net.guizhanss.guizhancraft.implementation.setup.ResearchSetup;
+import net.guizhanss.guizhancraft.integrations.IntegrationsManager;
 import net.guizhanss.guizhanlib.slimefun.addon.AbstractAddon;
 import net.guizhanss.guizhanlib.slimefun.addon.AddonConfig;
-
-import net.guizhanss.guizhancraft.core.services.LocalizationService;
-import net.guizhanss.guizhancraft.implementation.setup.ItemSetup;
-
-import javax.annotation.Nonnull;
 
 public final class GuizhanCraft extends AbstractAddon {
 
     private static final String DEFAULT_LANG = "zh-CN";
 
+    // Services
     private LocalizationService localization;
+
+    // Managers
     private IntegrationsManager integrations;
 
     public GuizhanCraft() {

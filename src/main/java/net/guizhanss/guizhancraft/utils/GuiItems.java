@@ -1,5 +1,10 @@
 package net.guizhanss.guizhancraft.utils;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.annotation.Nonnull;
+
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
@@ -8,11 +13,6 @@ import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import net.guizhanss.guizhancraft.implementation.GuizhanCraft;
 
 import lombok.experimental.UtilityClass;
-
-import javax.annotation.Nonnull;
-
-import java.util.HashMap;
-import java.util.Map;
 
 @UtilityClass
 public final class GuiItems {

@@ -5,12 +5,6 @@ import java.util.Optional;
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNullableByDefault;
 
-import net.guizhanss.guizhancraft.utils.Utils;
-
-import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
-
-import io.github.thebusybiscuit.slimefun4.implementation.items.blocks.RepairedSpawner;
-
 import org.bukkit.Location;
 import org.bukkit.block.Block;
 import org.bukkit.entity.EntityType;
@@ -18,20 +12,22 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.inventory.ItemStack;
 
+import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
+import io.github.thebusybiscuit.slimefun4.implementation.items.blocks.RepairedSpawner;
 import io.github.thebusybiscuit.slimefun4.utils.ChestMenuUtils;
 import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
 
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenuPreset;
 
-import net.guizhanss.guizhanlib.slimefun.machines.MenuBlock;
-
 import net.guizhanss.guizhancraft.implementation.GuizhanCraft;
 import net.guizhanss.guizhancraft.implementation.GuizhanCraftItems;
 import net.guizhanss.guizhancraft.utils.GuiItems;
+import net.guizhanss.guizhancraft.utils.Utils;
+import net.guizhanss.guizhanlib.slimefun.machines.MenuBlock;
 
 /**
  * This machine can assemble electric spawners with

@@ -1,11 +1,10 @@
 package net.guizhanss.guizhancraft.implementation.setup;
 
-import net.guizhanss.guizhancraft.utils.Keys;
-
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.researches.Research;
 
 import net.guizhanss.guizhancraft.implementation.GuizhanCraft;
+import net.guizhanss.guizhancraft.utils.Keys;
 
 import lombok.experimental.UtilityClass;
 

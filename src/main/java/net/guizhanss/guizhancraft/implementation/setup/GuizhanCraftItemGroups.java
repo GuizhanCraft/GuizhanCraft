@@ -8,10 +8,9 @@ import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import net.guizhanss.guizhancraft.implementation.GuizhanCraft;
 import net.guizhanss.guizhancraft.utils.HeadTextures;
 import net.guizhanss.guizhancraft.utils.Keys;
+import net.guizhanss.guizhanlib.utils.PlayerHeadUtil;
 
 import lombok.experimental.UtilityClass;
-
-import net.guizhanss.guizhanlib.utils.PlayerHeadUtil;
 
 /**
  * This class holds all {@link ItemGroup} for GuizhanCraft

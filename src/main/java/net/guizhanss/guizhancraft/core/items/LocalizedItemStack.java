@@ -1,14 +1,14 @@
 package net.guizhanss.guizhancraft.core.items;
 
-import net.guizhanss.guizhancraft.core.services.LocalizationService;
+import javax.annotation.ParametersAreNonnullByDefault;
+
 import org.bukkit.Material;
 
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 
+import net.guizhanss.guizhancraft.core.services.LocalizationService;
 import net.guizhanss.guizhancraft.implementation.GuizhanCraft;
 import net.guizhanss.guizhancraft.utils.Utils;
-
-import javax.annotation.ParametersAreNonnullByDefault;
 
 /**
  * An extended {@link SlimefunItemStack} that integrates
