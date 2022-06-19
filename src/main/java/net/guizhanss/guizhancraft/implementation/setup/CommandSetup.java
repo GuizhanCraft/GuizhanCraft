@@ -1,9 +1,10 @@
-package net.guizhanss.guizhancraft.setup;
+package net.guizhanss.guizhancraft.implementation.setup;
+
+import net.guizhanss.guizhancraft.implementation.GuizhanCraft;
+import net.guizhanss.guizhancraft.implementation.commands.SfSpanwerCommand;
+import net.guizhanss.guizhancraft.implementation.commands.SfSpawnerCompleter;
 
 import lombok.experimental.UtilityClass;
-import net.guizhanss.guizhancraft.GuizhanCraft;
-import net.guizhanss.guizhancraft.commands.SfSpanwerCommand;
-import net.guizhanss.guizhancraft.commands.SfSpawnerCompleter;
 
 /**
  * This class sets up all commands

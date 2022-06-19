@@ -1,5 +1,3 @@
-# English (United States)
-# author: ybw0014
 categories:
   main: "&aGuizhan&bCraft"
   material: "&aGuizhan&bCraft &7- &eMaterials"
@@ -7,54 +5,70 @@ categories:
   machine: "&aGuizhan&bCraft &7- &eMachines"
 
 items:
-  backpack_material:
-    name: "&eBackpack Material"
+  electric_spawner_framework:
+    name: "&eElectric Spawner Framework"
     lore:
-      - "&aMaterial that are used"
-      - "&afor backpacks only"
+      - "&7Something is missing..."
+  electric_spawner_assembler:
+    name: "&eElectric Spawner &aAssembler"
+    lore:
+      - "&7Craft electric spawner"
+      - "&7with Electric Spawner Framework"
+      - "&7and Reinforced Spawner"
       - ""
-      - "&7&oNetherlands imported calfskin"
-  backpack_upgrader:
-    name: "&eBackpack Upgrader"
-    lore:
-      - "&aA machine made for a special feature"
-      - ""
-      - "&7Use backpack material and 14-carat gold"
-      - "&7to upgrade backpacks"
-  recycler:
-    name: "&eRecycler"
-    lore:
-      - "&aMade too many materials?"
-      - "&aDon't worry, just recycle them"
-  enhanced_ancient_altar:
-    name: "&e&lEnhanced &dAncient Altar"
-    lore:
-      - "&aCombines Ancient Altar and Ancient Pedestal"
-      - "&aWill it work?"
+      - "&7Can manually craft without consuming energy"
+
+lores:
+  per-craft: "&7per craft"
+  per-use: "&7per use"
 
 researches:
-  enhanced_ancient_altar: "Enhanced Ancient Altar"
-  backpack_upgrader: "Backpack Upgrader"
+  electric_spawner_assembler: "Electric Spawner Assembler"
 
 gui:
-  preview: "&ePreview"
   craft: "&aClick to craft"
-  backpack_upgrader:
-    material: "&bPut &eBackpack Material &bbelow"
-    backpack: "&bPut &eBackpack &bbelow"
-    gold: "&bPut &eGold Ingot &7(14-carat) &bbelow"
+  not-enough-energy: "&cNot enough energy"
+  no-input: "&cNot enough input"
+  no-output-space: "&cNo output space"
+  success: "&aSuccess!"
+  electric_spawner_assembler:
+    info:
+      name: "&eInformation"
+      lore:
+        - "&7Put &eElectric Spawner Framework &7on left side"
+        - "&7Put &eReinforced Spawner &7on right side"
+        - ""
+        - "&7Click the button below to craft once"
+        - "&7(no energy required)"
 
 messages:
-  no_permission: "&4You do not have permission to do that!"
-  invalid_recipe: "&cInvalid recipe!"
-  input_all: "&cInput all required items!"
-  output_no_space: "&cOutput slots are full!"
+  no-permission: "&4You do not have permission!"
+  no-console: "&4Only players can execute this command!"
+  usage: "&eUsage: &a{0}"
+  player-not-found: "&cCannot find player {0}!"
+  invalid-recipe: "&cInvalid recipe!"
+  no-input: "&cInsufficient input materials!"
+  no-output-space: "&cNot enough output space!"
   crafted: "&aSuccessfully crafted &e{0}&a!"
-  enhanced_ancient_altar:
-    start: "&bInitiated the ritual of &e{0} &b..."
-    crafting: "&cThe ritual of &e{0} &cis in progress!"
-  backpack_upgrader:
-    invalid_material: "&cInvalid Backpack Material!"
-    invalid_backpack: "&cInvalid Backpack!"
-    invalid_gold: "&cInvalid Gold Ingot (14-carat)!"
-    stacked: "&cCannot upgrade stacked backpacks!"
+  not-crafted: "&cFailed to craft: &e{0}&c!"
+
+console:
+  loaded_language: "Current language is English (United States)!"
+  loading_items: "Loading items..."
+  loading_commands: "Loading commands..."
+  loading_researches: "Researches are enabled, loading researches..."
+  loading_integrations: "Loading integrations..."
+  loading_integration: "Loading integration plugin {0}"
+  loaded_integration: "Integrated with plugin {0} v{1}"
+
+commands:
+  sfspawner:
+    invalid-entity-type: "&cInvalid entity type: {0}"
+    sent: "&b{0} &ahas been given &b{1}"
+    received: "&aYou received &b{1} &afrom &b{0}"
+    broken:
+      usage: "&b/sfs broken <player> <entity type> [amount]"
+      description: "&aGive player broken spawner with specified entity type."
+    repaired:
+      usage: "&b/sfs repaired <player> <entity type> [amount]"
+      description: "&aGive player reinforced spawner with specified entity type."

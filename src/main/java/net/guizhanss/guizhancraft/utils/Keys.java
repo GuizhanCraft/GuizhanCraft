@@ -1,12 +1,16 @@
 package net.guizhanss.guizhancraft.utils;
 
-import lombok.experimental.UtilityClass;
-import net.guizhanss.guizhancraft.GuizhanCraft;
-import org.apache.commons.lang.Validate;
-import org.bukkit.NamespacedKey;
-
 import javax.annotation.Nonnull;
 
+import com.google.common.base.Preconditions;
+
+import org.bukkit.NamespacedKey;
+
+import net.guizhanss.guizhancraft.implementation.GuizhanCraft;
+
+import lombok.experimental.UtilityClass;
+
+@SuppressWarnings("ConstantConditions")
 @UtilityClass
 public final class Keys {
 
@@ -17,13 +21,13 @@ public final class Keys {
 
     @Nonnull
     public static NamespacedKey getCategory(@Nonnull String key) {
-        Validate.notNull(key, "key should not be null");
+        Preconditions.checkArgument(key != null, "key should not be null");
         return get("ig_" + key);
     }
 
     @Nonnull
     public static NamespacedKey getResearch(@Nonnull String key) {
-        Validate.notNull(key, "key should not be null");
+        Preconditions.checkArgument(key != null, "key should not be null");
         return get("research_" + key);
     }
 }

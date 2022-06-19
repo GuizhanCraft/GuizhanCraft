@@ -17,11 +17,12 @@ This addon can be downloaded from Guizhan Builds page:
 
 ## Supported language / 支持语言
 
-You can change the language in `config.yml`. Supported languages:
+You can change the language in `config.yml`. Supported languages:  
+你可以在`config.yml`中更改语言。支持的语言:
 
-- English (United States) `en-US`
-- 简体中文 `zh-CN`
-- 繁體中文 `zh-TW`
+- `en-US` English (United States) 
+- `zh-CN` 简体中文 
+- `zh-TW` 繁體中文
 
 ## Bug report / 错误汇报
 

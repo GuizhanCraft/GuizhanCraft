@@ -1,4 +1,4 @@
-name: Bug汇报
+name: Bug汇报 (中文)
 description: 反馈本插件的Bug或问题，仅限中文
 labels: ["bug"]
 assignees:
@@ -26,7 +26,7 @@ body:
           required: true
         - label: 你没有安装`CS-CoreLib`
           required: true
-        - label: 你已经寻找过[已知问题列表](https://github.com/ybw0014/SlimeTinker-CN/issues)，且没有找到相同的问题
+        - label: 你已经寻找过[已知问题列表](https://github.com/ybw0014/GuizhanCraft/issues)，且没有找到相同的问题
           required: true
 
   - type: textarea
@@ -106,11 +106,10 @@ body:
       label: Minecraft 版本
       description: 请选择你的 Minecraft 版本
       options:
+        - 1.19.x
         - 1.18.x
         - 1.17.x
         - 1.16.x
-        - 1.15.x
-        - 1.14.x
         - 本插件不支持旧版本
     validations:
       required: true

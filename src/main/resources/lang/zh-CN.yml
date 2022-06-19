@@ -5,62 +5,65 @@ categories:
   machine: "&a鬼斩&b科技 &7- &e机器"
 
 items:
-  backpack_material:
-    name: "&e背包材料"
+  electric_spawner_framework:
+    name: "&e电力刷怪笼框架"
     lore:
-      - "&a专门用来制作背包的材料"
+      - "&7好像差了点什么..."
+  electric_spawner_assembler:
+    name: "&e电力刷怪笼&a组装机"
+    lore:
+      - "&7可以用电力刷怪笼框架"
+      - "&7和已修复的刷怪笼"
+      - "&7组装电力刷怪笼"
       - ""
-      - "&7&o荷兰进口小牛皮"
-  backpack_upgrader:
-    name: "&e背包升级器"
-    lore:
-      - "&a因为某个特性而诞生的机器"
-      - ""
-      - "&7使用背包材料，14克拉金锭来升级背包"
-  recycler:
-    name: "&e回收机"
-    lore:
-      - "&a材料做多了?"
-      - "&a不用担心，回收一下就好了"
-  enhanced_ancient_altar:
-    name: "&e&l增强&d古代祭坛"
-    lore:
-      - "&a把祭坛和基座搓到一块"
-      - "&a到底还能不能用呢?"
+      - "&7可进行不消耗电力的手动合成"
+
+lores:
+  per-craft: "&7每次合成"
+  per-use: "&7每次使用"
 
 researches:
-  enhanced_ancient_altar: "增强古代祭坛"
-  backpack_upgrader: "背包升级"
+  electric_spawner_assembler: "电力刷怪笼组装机"
 
 gui:
-  preview: "&e预览"
   craft: "&a点击合成"
-  backpack_upgrader:
-    material: "&b在下方放入 &e背包材料"
-    backpack: "&b在下方放入 &e背包"
-    gold: "&b在下方放入 &e金锭 &7(14克拉)"
+  not-enough-energy: "&c电力不足"
+  no-input: "&c缺少输入"
+  no-output-space: "&c输出空间不足"
+  success: "&a成功!"
+  electric_spawner_assembler:
+    info:
+      name: "&e说明"
+      lore:
+        - "&7在左侧放入&e电力刷怪笼框架"
+        - "&7在右侧放入&e已修复的刷怪笼"
+        - ""
+        - "&7点击下方的按钮可手动合成一次"
+        - "&7(无需电力)"
 
 messages:
-  no_permission: "&4你没有权限!"
-  no_console: "&4只有玩家才能执行该指令!"
+  no-permission: "&4你没有权限!"
+  no-console: "&4只有玩家才能执行该指令!"
   usage: "&e用法: &a{0}"
-  player_not_found: "&c找不到指定玩家 {0}!"
-  invalid_recipe: "&c无效的配方!"
-  input_all: "&c请在所有输入栏放入物品!"
-  output_no_space: "&c输出栏已满!"
+  player-not-found: "&c找不到指定玩家 {0}!"
+  invalid-recipe: "&c无效的配方!"
+  no-input: "&c请在所有输入栏放入物品!"
+  no-output-space: "&c输出空间不足!"
   crafted: "&a成功合成&e{0}&a!"
-  enhanced_ancient_altar:
-    start: "&e{0} &b仪式开始..."
-    crafting: "&e{0} &c的仪式正在进行中!"
-  backpack_upgrader:
-    invalid_material: "&c背包材料无效!"
-    invalid_backpack: "&c背包无效!"
-    invalid_gold: "&c金锭(14克拉)无效!"
-    stacked: "&c无法升级堆叠的背包!"
+  not-crafted: "&c合成失败:&e{0}&c!"
+
+console:
+  loaded_language: "当前语言为简体中文!"
+  loading_items: "加载物品中..."
+  loading_commands: "加载指令中..."
+  loading_researches: "研究已启用, 加载研究中..."
+  loading_integrations: "加载关联插件中..."
+  loading_integration: "正在关联插件 {0}"
+  loaded_integration: "已关联插件 {0} v{1}"
 
 commands:
   sfspawner:
-    invalid_entity_type: "&c无效的生物类型: {0}"
+    invalid-entity-type: "&c无效的生物类型: {0}"
     sent: "&b{0} &a已获得 &b{1}"
     received: "&a你收到了来自 &b{0} &a的 &b{1}"
     broken:

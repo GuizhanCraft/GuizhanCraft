@@ -1,26 +1,28 @@
-package net.guizhanss.guizhancraft.slimefun;
+package net.guizhanss.guizhancraft.implementation.setup;
 
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.groups.NestedItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.groups.SubItemGroup;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
-import lombok.experimental.UtilityClass;
-import net.guizhanss.guizhancraft.GuizhanCraft;
+
+import net.guizhanss.guizhancraft.implementation.GuizhanCraft;
 import net.guizhanss.guizhancraft.utils.HeadTextures;
 import net.guizhanss.guizhancraft.utils.Keys;
-import net.guizhanss.guizhancraft.utils.Utils;
+import net.guizhanss.guizhanlib.utils.PlayerHeadUtil;
+
+import lombok.experimental.UtilityClass;
 
 /**
- * This class holds all {@link ItemGroup} for GuizhanCraft
+ * This class holds all {@link ItemGroup} for GuizhanCraft.
  *
  * @author ybw0014
  */
 @UtilityClass
-public final class GuizhanCraftItemGroups {
+final class GuizhanCraftItemGroups {
     public static final NestedItemGroup MAIN = new NestedItemGroup(
         Keys.getCategory("main"),
         new CustomItemStack(
-            Utils.getHeadItem(HeadTextures.MAIN_ITEM_GROUP),
+            PlayerHeadUtil.getFromHash(HeadTextures.MAIN_ITEM_GROUP),
             GuizhanCraft.getLocalization().getCategoryName("main")
         ),
         1
@@ -30,7 +32,7 @@ public final class GuizhanCraftItemGroups {
         Keys.getCategory("material"),
         MAIN,
         new CustomItemStack(
-            Utils.getHeadItem(HeadTextures.MATERIAL_ITEM_GROUP),
+            PlayerHeadUtil.getFromHash(HeadTextures.MATERIAL_ITEM_GROUP),
             GuizhanCraft.getLocalization().getCategoryName("material")
         )
     );
@@ -48,7 +50,7 @@ public final class GuizhanCraftItemGroups {
         Keys.getCategory("machine"),
         MAIN,
         new CustomItemStack(
-            Utils.getHeadItem(HeadTextures.MACHINE_ITEM_GROUP),
+            PlayerHeadUtil.getFromHash(HeadTextures.MACHINE_ITEM_GROUP),
             GuizhanCraft.getLocalization().getCategoryName("machine")
         )
     );

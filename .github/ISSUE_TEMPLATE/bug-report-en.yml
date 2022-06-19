@@ -1,4 +1,4 @@
-name: Bug Report
+name: Bug Report (English)
 description: Report bugs or problems about this Plugin, English only
 labels: ["bug"]
 assignees:
@@ -104,11 +104,10 @@ body:
       label: Minecraft Version
       description: Please select your Minecraft Version
       options:
+        - 1.19.x
         - 1.18.x
         - 1.17.x
         - 1.16.x
-        - 1.15.x
-        - 1.14.x
         - Older versions are not supported
     validations:
       required: true

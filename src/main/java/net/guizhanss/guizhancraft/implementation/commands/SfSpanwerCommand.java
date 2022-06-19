@@ -1,13 +1,7 @@
-package net.guizhanss.guizhancraft.commands;
+package net.guizhanss.guizhancraft.implementation.commands;
 
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
-import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
-import io.github.thebusybiscuit.slimefun4.implementation.items.blocks.AbstractMonsterSpawner;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
-import net.guizhanss.guizhancraft.GuizhanCraft;
-import net.guizhanss.guizhanlib.java.IntegerHelper;
-import net.guizhanss.guizhanlib.minecraft.helper.inventory.ItemStackHelper;
-import net.guizhanss.guizhanlib.utils.InventoryUtil;
+import javax.annotation.ParametersAreNonnullByDefault;
+
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -16,15 +10,30 @@ import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-import javax.annotation.ParametersAreNonnullByDefault;
+import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
+import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
+import io.github.thebusybiscuit.slimefun4.implementation.items.blocks.AbstractMonsterSpawner;
+import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 
+import net.guizhanss.guizhancraft.implementation.GuizhanCraft;
+import net.guizhanss.guizhanlib.java.IntegerHelper;
+import net.guizhanss.guizhanlib.minecraft.helper.inventory.ItemStackHelper;
+import net.guizhanss.guizhanlib.utils.InventoryUtil;
+
+/**
+ * {@link CommandExecutor} for /sfspawner
+ * <p>
+ * TODO: rewrite when AddonCommand is published
+ *
+ * @author ybw0014
+ */
 public class SfSpanwerCommand implements CommandExecutor {
 
     @Override
     @ParametersAreNonnullByDefault
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (!sender.isOp() && !sender.hasPermission("guizhancraft.commands.sfspawner")) {
-            GuizhanCraft.getLocalization().sendMessage(sender, "no_permission");
+            GuizhanCraft.getLocalization().sendMessage(sender, "no-permission");
             return true;
         }
         if (args.length == 3 || args.length == 4) {
@@ -44,7 +53,7 @@ public class SfSpanwerCommand implements CommandExecutor {
     private void giveSpawner(CommandSender sender, String[] args, boolean isRepaired) {
         Player target = Bukkit.getPlayer(args[1]);
         if (target == null) {
-            GuizhanCraft.getLocalization().sendMessage(sender, "player_not_found", args[1]);
+            GuizhanCraft.getLocalization().sendMessage(sender, "player-not-found", args[1]);
             return;
         }
         // limit amount
@@ -55,7 +64,7 @@ public class SfSpanwerCommand implements CommandExecutor {
         try {
             entityType = EntityType.valueOf(args[2]);
         } catch (IllegalArgumentException ex) {
-            GuizhanCraft.getLocalization().send(sender, "commands.sfspawner.invalid_entity_type", args[2]);
+            GuizhanCraft.getLocalization().send(sender, "commands.sfspawner.invalid-entity-type", args[2]);
             return;
         }
 
@@ -69,5 +78,4 @@ public class SfSpanwerCommand implements CommandExecutor {
         GuizhanCraft.getLocalization().send(sender, "commands.sfspawner.sent", target.getName(), ItemStackHelper.getDisplayName(spawner));
         GuizhanCraft.getLocalization().send(target, "commands.sfspawner.received", sender.getName(), ItemStackHelper.getDisplayName(spawner));
     }
-
 }

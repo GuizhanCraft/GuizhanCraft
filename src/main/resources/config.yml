@@ -1,3 +1,9 @@
+# DO NOT change this
+version: 2
+
+# Debug mode
+debug: false
+
 # Enable auto update from Guizhan Builds Page
 auto-update: true
 
@@ -7,5 +13,7 @@ auto-update: true
 ## since current Slimefun recipe system cannot recognize items with same id but different names
 lang: zh-CN
 
-# Enable research
-enable-research: true
+# Enable researches
+enable-researches: true
+
+
