@@ -46,7 +46,7 @@
                             <relocations>
                                 <relocation>
                                     <pattern>net.guizhanss.guizhanlib</pattern>
-                                    <shadedPattern>dev.ybw0014.guizhancraft.libs.guizhanlib</shadedPattern>
+                                    <shadedPattern>net.guizhanss.guizhancraft.libs.guizhanlib</shadedPattern>
                                 </relocation>
                             </relocations>
                         </configuration>
