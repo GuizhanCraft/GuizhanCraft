@@ -8,15 +8,15 @@ categories:
 
 items:
   electric_spawner_framework:
-    name: "&e電力刷怪籠框架"
+    name: "&e電力生怪磚框架"
     lore:
       - "&7好像差了點什麽..."
   electric_spawner_assembler:
-    name: "&e電力刷怪籠&a組裝機"
+    name: "&e電力生怪磚&a組裝機"
     lore:
-      - "&7可以用電力刷怪籠框架"
-      - "&7和已修復的刷怪籠"
-      - "&7組裝電力刷怪籠"
+      - "&7可以用電力生怪磚框架"
+      - "&7和已修復的生怪磚"
+      - "&7組裝電力生怪磚"
       - ""
       - "&7可進行不消耗電力的手動合成"
 
@@ -25,7 +25,7 @@ lores:
   per-use: "&7每次使用"
 
 researches:
-  electric_spawner_assembler: "電力刷怪籠組裝機"
+  electric_spawner_assembler: "電力生怪磚組裝機"
 
 gui:
   craft: "&a點擊合成"
@@ -37,8 +37,8 @@ gui:
     info:
       name: "&e說明"
       lore:
-        - "&7在左側放入&e電力刷怪籠框架"
-        - "&7在右側放入&e已修復的刷怪籠"
+        - "&7在左側放入&e電力生怪磚框架"
+        - "&7在右側放入&e已修復的生怪磚"
         - ""
         - "&7點擊下方的按鈕可手動合成一次"
         - "&7(無需電力)"
@@ -70,8 +70,8 @@ commands:
     received: "&a你收到了來自 &b{0} &a的 &b{1}"
     broken:
       usage: "&b/sfs broken <玩家名稱> <生物類型>"
-      description: "&a給予指定玩家指定類型的破損刷怪籠"
+      description: "&a給予指定玩家指定類型的已損壞的生怪磚"
     repaired:
       usage: "&b/sfs repaired <玩家名稱> <生物類型>"
-      description: "&a給予指定玩家指定類型的已修復的刷怪籠"
+      description: "&a給予指定玩家指定類型的已修復的生怪磚"
 
