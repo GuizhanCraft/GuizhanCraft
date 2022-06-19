@@ -1,10 +1,13 @@
 name: GuizhanCraft
 version: '${project.version}'
-main: net.guizhanss.guizhancraft.GuizhanCraft
-api-version: 1.14
-depend: [ Slimefun ]
+main: dev.ybw0014.guizhancraft.implementation.GuizhanCraft
+api-version: 1.16
 authors: [ ybw0014 ]
 description: A Slimefun Addon
+depend:
+  - Slimefun
+softdepend:
+  - ElectricSpawners
 commands:
   sfspawner:
     description: /sfspawner
