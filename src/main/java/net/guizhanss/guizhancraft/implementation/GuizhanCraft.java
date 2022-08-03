@@ -5,6 +5,10 @@ import java.util.logging.Level;
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 
+import org.bstats.bukkit.Metrics;
+
+import org.bstats.charts.SimplePie;
+
 import org.bukkit.configuration.Configuration;
 
 import net.guizhanss.guizhancraft.core.services.LocalizationService;
@@ -28,23 +32,17 @@ public final class GuizhanCraft extends AbstractAddon {
     private IntegrationsManager integrations;
 
     public GuizhanCraft() {
-        super("ybw0014", "GuizhanCraft", "master", "auto-update", "lang");
-        enableMetrics(14629);
-    }
-
-    @Nonnull
-    private static GuizhanCraft inst() {
-        return getInstance();
+        super("ybw0014", "GuizhanCraft", "master", "auto-update");
     }
 
     @Nonnull
     public static LocalizationService getLocalization() {
-        return inst().localization;
+        return ((GuizhanCraft) getInstance()).localization;
     }
 
     @ParametersAreNonnullByDefault
     public static void debug(String message, Object... args) {
-        if (inst().isDebugEnabled) {
+        if (((GuizhanCraft) getInstance()).isDebugEnabled) {
             GuizhanCraft.log(Level.WARNING, "[DEBUG] " + message, args);
         }
     }
@@ -101,6 +99,10 @@ public final class GuizhanCraft extends AbstractAddon {
         localization.sendConsole("loading_integrations");
         integrations = new IntegrationsManager(this);
         integrations.start();
+
+        // Metrics setup
+        final Metrics metrics = new Metrics(this, 14629);
+        metrics.addCustomChart(new SimplePie("server_language", () -> lang));
     }
 
     @Override

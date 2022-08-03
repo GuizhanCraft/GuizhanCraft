@@ -2,6 +2,8 @@ package net.guizhanss.guizhancraft.implementation.commands;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 
+import net.guizhanss.guizhanlib.minecraft.utils.InventoryUtil;
+
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -18,7 +20,6 @@ import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import net.guizhanss.guizhancraft.implementation.GuizhanCraft;
 import net.guizhanss.guizhanlib.java.IntegerHelper;
 import net.guizhanss.guizhanlib.minecraft.helper.inventory.ItemStackHelper;
-import net.guizhanss.guizhanlib.utils.InventoryUtil;
 
 /**
  * {@link CommandExecutor} for /sfspawner

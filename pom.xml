@@ -48,7 +48,19 @@
                                     <pattern>net.guizhanss.guizhanlib</pattern>
                                     <shadedPattern>net.guizhanss.guizhancraft.libs.guizhanlib</shadedPattern>
                                 </relocation>
+                                <relocation>
+                                    <pattern>org.bstats</pattern>
+                                    <shadedPattern>net.guizhanss.guizhancraft.libs.bstats</shadedPattern>
+                                </relocation>
                             </relocations>
+                            <filters>
+                                <filter>
+                                    <artifact>*:*</artifact>
+                                    <excludes>
+                                        <exclude>META-INF/*</exclude>
+                                    </excludes>
+                                </filter>
+                            </filters>
                         </configuration>
                     </execution>
                 </executions>
@@ -112,9 +124,33 @@
 
         <dependency>
             <groupId>net.guizhanss</groupId>
-            <artifactId>GuizhanLib</artifactId>
-            <version>0.9.8</version>
+            <artifactId>GuizhanLibPLugin</artifactId>
+            <version>1.0.1</version>
+            <scope>provided</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>net.guizhanss</groupId>
+                    <artifactId>GuizhanLib-slimefun</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.bstats</groupId>
+                    <artifactId>bstats-bukkit</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>net.guizhanss</groupId>
+            <artifactId>GuizhanLib-slimefun</artifactId>
+            <version>1.0.1</version>
             <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.bstats</groupId>
+            <artifactId>bstats-bukkit</artifactId>
+            <version>3.0.0</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 </project>

@@ -32,7 +32,8 @@ public final class SfSpawnerCompleter implements TabCompleter {
             return Arrays.stream(EntityType.values())
                 .map(EntityType::toString)
                 .collect(Collectors.toList());
+        } else {
+            return new ArrayList<>();
         }
-        return new ArrayList<>();
     }
 }
