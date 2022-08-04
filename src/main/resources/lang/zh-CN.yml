@@ -3,7 +3,6 @@ categories:
   material: "&a鬼斩&b科技 &7- &e材料"
   magic: "&a鬼斩&b科技 &7- &e魔法"
   machine: "&a鬼斩&b科技 &7- &e机器"
-
 items:
   electric_spawner_framework:
     name: "&e电力刷怪笼框架"
@@ -17,14 +16,11 @@ items:
       - "&7组装电力刷怪笼"
       - ""
       - "&7可进行不消耗电力的手动合成"
-
 lores:
   per-craft: "&7每次合成"
   per-use: "&7每次使用"
-
 researches:
   electric_spawner_assembler: "电力刷怪笼组装机"
-
 gui:
   craft: "&a点击合成"
   not-enough-energy: "&c电力不足"
@@ -40,7 +36,6 @@ gui:
         - ""
         - "&7点击下方的按钮可手动合成一次"
         - "&7(无需电力)"
-
 messages:
   no-permission: "&4你没有权限!"
   no-console: "&4只有玩家才能执行该指令!"
@@ -51,7 +46,6 @@ messages:
   no-output-space: "&c输出空间不足!"
   crafted: "&a成功合成&e{0}&a!"
   not-crafted: "&c合成失败:&e{0}&c!"
-
 console:
   loaded_language: "当前语言为简体中文!"
   loading_items: "加载物品中..."
@@ -60,7 +54,6 @@ console:
   loading_integrations: "加载关联插件中..."
   loading_integration: "正在关联插件 {0}"
   loaded_integration: "已关联插件 {0} v{1}"
-
 commands:
   sfspawner:
     invalid-entity-type: "&c无效的生物类型: {0}"

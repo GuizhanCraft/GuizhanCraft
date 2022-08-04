@@ -1,11 +1,8 @@
-# 繁體中文 Traditional Chinese
-# author: ybw0014, Efina, Hyuk
 categories:
   main: "&a鬼斬&b科技"
   material: "&a鬼斬&b科技 &7- &e材料"
   magic: "&a鬼斬&b科技 &7- &e魔法"
   machine: "&a鬼斬&b科技 &7- &e機器"
-
 items:
   electric_spawner_framework:
     name: "&e電力生怪磚框架"
@@ -19,14 +16,11 @@ items:
       - "&7組裝電力生怪磚"
       - ""
       - "&7可進行不消耗電力的手動合成"
-
 lores:
   per-craft: "&7每次合成"
   per-use: "&7每次使用"
-
 researches:
   electric_spawner_assembler: "電力生怪磚組裝機"
-
 gui:
   craft: "&a點擊合成"
   not-enough-energy: "&c電力不足"
@@ -42,7 +36,6 @@ gui:
         - ""
         - "&7點擊下方的按鈕可手動合成一次"
         - "&7(無需電力)"
-
 messages:
   no-permission: "&4你沒有權限!"
   no-console: "&4只有玩家才能執行該指令!"
@@ -53,7 +46,6 @@ messages:
   no-output-space: "&c輸出空間不足!"
   crafted: "&a成功合成&e{0}&a!"
   not-crafted: "&c合成失败:&e{0}&c!"
-
 console:
   loaded_language: "當前語言為繁體中文!"
   loading_items: "加載物品中..."
@@ -62,7 +54,6 @@ console:
   loading_integrations: "加載關聯插件中..."
   loading_integration: "正在關聯插件 {0}"
   loaded_integration: "已關聯插件 {0} v{1}"
-
 commands:
   sfspawner:
     invalid-entity-type: "&c無效的生物類型: {0}"
@@ -74,4 +65,3 @@ commands:
     repaired:
       usage: "&b/sfs repaired <玩家名稱> <生物類型>"
       description: "&a給予指定玩家指定類型的已修復的生怪磚"
-
