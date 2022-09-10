@@ -75,7 +75,7 @@ public final class GuizhanCraft extends AbstractAddon {
         }
 
         // Localization
-        String lang = config.getString("options.lang", DEFAULT_LANG);
+        String lang = config.getString("lang", DEFAULT_LANG);
         localization = new LocalizationService(this);
         localization.addLanguage(lang);
         if (!lang.equals(DEFAULT_LANG)) {
