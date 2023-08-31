@@ -1,11 +1,14 @@
 package net.guizhanss.guizhancraft.implementation;
 
+import java.io.File;
+import java.lang.reflect.Method;
 import java.util.logging.Level;
 
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 
 import org.bukkit.configuration.Configuration;
+import org.bukkit.plugin.Plugin;
 
 import net.guizhanss.guizhancraft.core.services.LocalizationService;
 import net.guizhanss.guizhancraft.implementation.setup.CommandSetup;
@@ -14,6 +17,7 @@ import net.guizhanss.guizhancraft.implementation.setup.ResearchSetup;
 import net.guizhanss.guizhancraft.integrations.IntegrationsManager;
 import net.guizhanss.guizhanlib.slimefun.addon.AbstractAddon;
 import net.guizhanss.guizhanlib.slimefun.addon.AddonConfig;
+import net.guizhanss.guizhanlib.updater.GuizhanBuildsUpdater;
 
 public final class GuizhanCraft extends AbstractAddon {
 
@@ -28,8 +32,7 @@ public final class GuizhanCraft extends AbstractAddon {
     private IntegrationsManager integrations;
 
     public GuizhanCraft() {
-        super("ybw0014", "GuizhanCraft", "master", "auto-update", "lang");
-        enableMetrics(14629);
+        super("ybw0014", "GuizhanCraft", "master", "auto-update");
     }
 
     @Nonnull
@@ -40,6 +43,11 @@ public final class GuizhanCraft extends AbstractAddon {
     @Nonnull
     public static LocalizationService getLocalization() {
         return inst().localization;
+    }
+
+    @Nonnull
+    public static IntegrationsManager getIntegrationManager() {
+        return inst().integrations;
     }
 
     @ParametersAreNonnullByDefault
@@ -108,8 +116,16 @@ public final class GuizhanCraft extends AbstractAddon {
         // Nothing to do yet
     }
 
-    @Nonnull
-    public IntegrationsManager getIntegrationManager() {
-        return integrations;
+    @Override
+    protected void autoUpdate() {
+        try {
+            // use updater in lib plugin
+            Class<?> clazz = Class.forName("net.guizhanss.guizhanlibplugin.updater.GuizhanUpdater");
+            Method updaterStart = clazz.getDeclaredMethod("start", Plugin.class, File.class, String.class, String.class, String.class);
+            updaterStart.invoke(null, this, getFile(), getGithubUser(), getGithubRepo(), getGithubBranch());
+        } catch (Exception ignored) {
+            // use updater in lib
+            new GuizhanBuildsUpdater(this, getFile(), getGithubUser(), getGithubRepo(), getGithubBranch()).start();
+        }
     }
 }
