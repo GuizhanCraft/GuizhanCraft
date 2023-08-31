@@ -65,3 +65,6 @@ commands:
     repaired:
       usage: "&b/sfs repaired <玩家名稱> <生物類型>"
       description: "&a給予指定玩家指定類型的已修復的生怪磚"
+  unloadchunk:
+    success: "&aYou have disable the force loading of the chunk you are standing on!"
+    not-force-loaded: "&cThe chunk you are standing on is not force loaded!"
