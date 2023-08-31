@@ -65,3 +65,6 @@ commands:
     repaired:
       usage: "&b/sfs repaired <玩家名称> <生物类型>"
       description: "&a给予指定玩家指定类型的已修复的刷怪笼"
+  unloadchunk:
+    success: "&aYou have disable the force loading of the chunk you are standing on!"
+    not-force-loaded: "&cThe chunk you are standing on is not force loaded!"
