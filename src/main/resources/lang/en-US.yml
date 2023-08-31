@@ -72,3 +72,6 @@ commands:
     repaired:
       usage: "&b/sfs repaired <player> <entity type> [amount]"
       description: "&aGive player reinforced spawner with specified entity type."
+  unloadchunk:
+    success: "&aYou have disable the force loading of the chunk you are standing on!"
+    not-force-loaded: "&cThe chunk you are standing on is not force loaded!"

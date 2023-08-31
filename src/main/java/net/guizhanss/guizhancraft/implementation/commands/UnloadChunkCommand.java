@@ -3,6 +3,7 @@ package net.guizhanss.guizhancraft.implementation.commands;
 import javax.annotation.ParametersAreNonnullByDefault;
 
 import org.bukkit.Bukkit;
+import org.bukkit.Chunk;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -25,51 +26,28 @@ public class UnloadChunkCommand implements CommandExecutor {
     @Override
     @ParametersAreNonnullByDefault
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if (!sender.isOp() && !sender.hasPermission("guizhancraft.commands.sfspawner")) {
+        if (!sender.isOp() && !sender.hasPermission("guizhancraft.commands.unloadchunk")) {
             GuizhanCraft.getLocalization().sendMessage(sender, "no-permission");
             return true;
         }
-        if (args.length == 3 || args.length == 4) {
-            if (args[0].equalsIgnoreCase("broken")) {
-                giveSpawner(sender, args, false);
-            } else if (args[0].equalsIgnoreCase("repaired")) {
-                giveSpawner(sender, args, true);
+
+        if (!(sender instanceof Player player)) {
+            GuizhanCraft.getLocalization().sendMessage(sender, "no-console");
+            return true;
+        }
+
+        if (args.length == 0) {
+            Chunk chunk = player.getLocation().getChunk();
+            if (chunk.isForceLoaded()) {
+                chunk.setForceLoaded(false);
+                GuizhanCraft.getLocalization().send(sender, "commands.unloadchunk.success");
             } else {
-                GuizhanCraft.getLocalization().sendMessage(sender, "usage", "/sf <broken/repaired> <player> <mob_type> [amount]");
+                GuizhanCraft.getLocalization().send(sender, "commands.unloadchunk.not-force-loaded");
             }
         } else {
-            GuizhanCraft.getLocalization().sendMessage(sender, "usage", "/sf <broken/repaired> <player> <mob_type> [amount]");
+            GuizhanCraft.getLocalization().sendMessage(sender, "usage", "/unloadchunk");
         }
         return true;
-    }
-
-    private void giveSpawner(CommandSender sender, String[] args, boolean isRepaired) {
-        Player target = Bukkit.getPlayer(args[1]);
-        if (target == null) {
-            GuizhanCraft.getLocalization().sendMessage(sender, "player-not-found", args[1]);
-            return;
-        }
-        // limit amount
-        int amount = IntegerHelper.parseInt(args.length == 4 ? args[3] : null, 1, 64);
-
-        // Get entity type
-        EntityType entityType;
-        try {
-            entityType = EntityType.valueOf(args[2]);
-        } catch (IllegalArgumentException ex) {
-            GuizhanCraft.getLocalization().send(sender, "commands.sfspawner.invalid-entity-type", args[2]);
-            return;
-        }
-
-        // Get spawner
-        ItemStack sfItemStack = isRepaired ? SlimefunItems.REPAIRED_SPAWNER : SlimefunItems.BROKEN_SPAWNER;
-        SlimefunItem sfItem = SlimefunItem.getByItem(sfItemStack);
-        AbstractMonsterSpawner spawnerItem = (AbstractMonsterSpawner) sfItem;
-        ItemStack spawner = new CustomItemStack(spawnerItem.getItemForEntityType(entityType), amount);
-
-        InventoryUtil.push(target, spawner);
-        GuizhanCraft.getLocalization().send(sender, "commands.sfspawner.sent", target.getName(), ItemStackHelper.getDisplayName(spawner));
-        GuizhanCraft.getLocalization().send(target, "commands.sfspawner.received", sender.getName(), ItemStackHelper.getDisplayName(spawner));
     }
 
 }

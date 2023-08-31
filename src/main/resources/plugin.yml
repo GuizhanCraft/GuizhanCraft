@@ -13,3 +13,8 @@ commands:
     description: /sfspawner
     usage: /sfspawner <sub>
     aliases: [ sfs ]
+
+  unloadchunk:
+    description: /unloadchunk
+    usage: /unloadchunk <sub>
+    aliases: [ uc ]
