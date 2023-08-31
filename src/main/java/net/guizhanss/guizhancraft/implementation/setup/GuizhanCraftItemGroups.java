@@ -4,11 +4,11 @@ import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.groups.NestedItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.groups.SubItemGroup;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
+import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
 
 import net.guizhanss.guizhancraft.implementation.GuizhanCraft;
 import net.guizhanss.guizhancraft.utils.HeadTextures;
 import net.guizhanss.guizhancraft.utils.Keys;
-import net.guizhanss.guizhanlib.utils.PlayerHeadUtil;
 
 import lombok.experimental.UtilityClass;
 
@@ -22,7 +22,7 @@ final class GuizhanCraftItemGroups {
     public static final NestedItemGroup MAIN = new NestedItemGroup(
         Keys.getCategory("main"),
         new CustomItemStack(
-            PlayerHeadUtil.getFromHash(HeadTextures.MAIN_ITEM_GROUP),
+            SlimefunUtils.getCustomHead(HeadTextures.MAIN_ITEM_GROUP),
             GuizhanCraft.getLocalization().getCategoryName("main")
         ),
         1
@@ -32,7 +32,7 @@ final class GuizhanCraftItemGroups {
         Keys.getCategory("material"),
         MAIN,
         new CustomItemStack(
-            PlayerHeadUtil.getFromHash(HeadTextures.MATERIAL_ITEM_GROUP),
+            SlimefunUtils.getCustomHead(HeadTextures.MATERIAL_ITEM_GROUP),
             GuizhanCraft.getLocalization().getCategoryName("material")
         )
     );
@@ -50,7 +50,7 @@ final class GuizhanCraftItemGroups {
         Keys.getCategory("machine"),
         MAIN,
         new CustomItemStack(
-            PlayerHeadUtil.getFromHash(HeadTextures.MACHINE_ITEM_GROUP),
+            SlimefunUtils.getCustomHead(HeadTextures.MACHINE_ITEM_GROUP),
             GuizhanCraft.getLocalization().getCategoryName("machine")
         )
     );
