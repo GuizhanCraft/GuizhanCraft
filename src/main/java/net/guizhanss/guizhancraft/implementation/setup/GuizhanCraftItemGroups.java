@@ -22,7 +22,7 @@ final class GuizhanCraftItemGroups {
     public static final NestedItemGroup MAIN = new NestedItemGroup(
         Keys.getCategory("main"),
         new CustomItemStack(
-            SlimefunUtils.getCustomHead(HeadTextures.MAIN_ITEM_GROUP),
+            SlimefunUtils.getCustomHead(HeadTextures.GROUP_MAIN),
             GuizhanCraft.getLocalization().getCategoryName("main")
         ),
         1
@@ -32,7 +32,7 @@ final class GuizhanCraftItemGroups {
         Keys.getCategory("material"),
         MAIN,
         new CustomItemStack(
-            SlimefunUtils.getCustomHead(HeadTextures.MATERIAL_ITEM_GROUP),
+            SlimefunUtils.getCustomHead(HeadTextures.GROUP_MATERIAL),
             GuizhanCraft.getLocalization().getCategoryName("material")
         )
     );
@@ -46,11 +46,20 @@ final class GuizhanCraftItemGroups {
 //        )
 //    );
 
+    public static final SubItemGroup GENERATOR = new SubItemGroup(
+        Keys.getCategory("generator"),
+        MAIN,
+        new CustomItemStack(
+            SlimefunUtils.getCustomHead(HeadTextures.GROUP_GENERATOR),
+            GuizhanCraft.getLocalization().getCategoryName("generator")
+        )
+    );
+
     public static final SubItemGroup MACHINE = new SubItemGroup(
         Keys.getCategory("machine"),
         MAIN,
         new CustomItemStack(
-            SlimefunUtils.getCustomHead(HeadTextures.MACHINE_ITEM_GROUP),
+            SlimefunUtils.getCustomHead(HeadTextures.GROUP_MACHINE),
             GuizhanCraft.getLocalization().getCategoryName("machine")
         )
     );

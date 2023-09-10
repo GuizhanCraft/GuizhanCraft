@@ -8,13 +8,12 @@ import javax.annotation.ParametersAreNonnullByDefault;
 
 import com.google.common.base.Preconditions;
 
-import net.guizhanss.guizhanlib.minecraft.utils.ChatUtil;
-
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import net.guizhanss.guizhancraft.implementation.GuizhanCraft;
 import net.guizhanss.guizhanlib.localization.Localization;
+import net.guizhanss.guizhanlib.minecraft.utils.ChatUtil;
 import net.guizhanss.guizhanlib.utils.StringUtil;
 import net.md_5.bungee.api.ChatMessageType;
 import net.md_5.bungee.api.chat.BaseComponent;
@@ -56,6 +55,27 @@ public final class LocalizationService extends Localization {
         Preconditions.checkArgument(itemId != null, "Item id cannot be null");
 
         return getStringArray("items." + StringUtil.dehumanize(itemId).toLowerCase(Locale.ROOT) + ".lore");
+    }
+
+    @Nonnull
+    public String getRecipeTypeName(@Nonnull String recipeTypeId) {
+        Preconditions.checkArgument(recipeTypeId != null, "RecipeType id cannot be null");
+
+        return getString("recipes." + StringUtil.dehumanize(recipeTypeId).toLowerCase(Locale.ROOT) + ".name");
+    }
+
+    @Nonnull
+    public String[] getRecipeTypeLore(@Nonnull String recipeTypeId) {
+        Preconditions.checkArgument(recipeTypeId != null, "RecipeType id cannot be null");
+
+        return getStringArray("recipes." + StringUtil.dehumanize(recipeTypeId).toLowerCase(Locale.ROOT) + ".lore");
+    }
+
+    @Nonnull
+    public String getLore(@Nonnull String loreId) {
+        Preconditions.checkArgument(loreId != null, "lore id cannot be null");
+
+        return getString("lores." + StringUtil.dehumanize(loreId).toLowerCase(Locale.ROOT));
     }
 
     @Nonnull
