@@ -2,9 +2,25 @@ categories:
   main: "&aGuizhan&bCraft"
   material: "&aGuizhan&bCraft &7- &eMaterials"
   magic: "&aGuizhan&bCraft &7- &eMagic"
+  generator: "&aGuizhan&bCraft &7- &eGenerator"
   machine: "&aGuizhan&bCraft &7- &eMachines"
 
+recipes:
+  fe_unknown:
+    name: "&bFallen Empire Technology"
+    lore:
+      - "&7These buildings use incredibly"
+      - "&7advanced arcane technology,"
+      - "&7even the fallen empires have"
+      - "&7forgotten how to build these."
+
 items:
+  class_4_singularity:
+    name: "&6Class-4 Singularity"
+    lore:
+      - "&7&oEven after all this time,"
+      - "&7&othe containment fields remain stable."
+      - "&7&oNo one understands how."
   electric_spawner_framework:
     name: "&eElectric Spawner Framework"
     lore:
@@ -19,8 +35,11 @@ items:
       - "&7Can manually craft without consuming energy"
 
 lores:
-  per-craft: "&7per craft"
-  per-use: "&7per use"
+  per-tick: " &7per Slimefun tick"
+  per-craft: " &7per craft"
+  per-use: " &7per use"
+  generator: "&e&lGenerator"
+  machine: "&b&lMachine"
 
 researches:
   electric_spawner_assembler: "Electric Spawner Assembler"
