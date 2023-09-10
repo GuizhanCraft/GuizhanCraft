@@ -5,7 +5,6 @@ import javax.annotation.Nullable;
 
 import com.google.common.base.Preconditions;
 
-import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
 import lombok.experimental.UtilityClass;
@@ -21,6 +20,6 @@ public final class Utils {
     }
 
     public static boolean checkItemStack(@Nullable ItemStack item) {
-        return item != null && item.getType() != Material.AIR;
+        return item != null && !item.getType().isAir();
     }
 }
