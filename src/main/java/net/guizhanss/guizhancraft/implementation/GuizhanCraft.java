@@ -7,6 +7,8 @@ import java.util.logging.Level;
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 
+import io.github.thebusybiscuit.slimefun4.libraries.dough.updater.GitHubBuildsUpdater;
+
 import org.bukkit.configuration.Configuration;
 import org.bukkit.plugin.Plugin;
 
@@ -21,7 +23,8 @@ import net.guizhanss.guizhanlib.updater.GuizhanBuildsUpdater;
 
 public final class GuizhanCraft extends AbstractAddon {
 
-    private static final String DEFAULT_LANG = "zh-CN";
+    private static final String DEFAULT_LANG = "en-US";
+    private static final int CONFIG_VERSION = 2;
 
     private boolean isDebugEnabled = false;
 
@@ -61,19 +64,19 @@ public final class GuizhanCraft extends AbstractAddon {
     protected void enable() {
         sendConsole("&a==================");
         sendConsole("&a   GuizhanCraft   ");
-        sendConsole("&a      ybw0014     ");
+        sendConsole("&a    by ybw0014    ");
         sendConsole("&a==================");
 
         // Config
         AddonConfig config = getAddonConfig();
-        if (config.getInt("version", 1) < 2) {
+        if (config.getInt("version", 1) < CONFIG_VERSION) {
             Configuration defaultConfig = config.getDefaults();
             for (String key : defaultConfig.getKeys(true)) {
                 if (!config.contains(key)) {
                     config.set(key, defaultConfig.get(key));
                 }
             }
-            config.set("version", 2);
+            config.set("version", CONFIG_VERSION);
             config.save();
         }
 
@@ -118,14 +121,19 @@ public final class GuizhanCraft extends AbstractAddon {
 
     @Override
     protected void autoUpdate() {
-        try {
-            // use updater in lib plugin
-            Class<?> clazz = Class.forName("net.guizhanss.guizhanlibplugin.updater.GuizhanUpdater");
-            Method updaterStart = clazz.getDeclaredMethod("start", Plugin.class, File.class, String.class, String.class, String.class);
-            updaterStart.invoke(null, this, getFile(), getGithubUser(), getGithubRepo(), getGithubBranch());
-        } catch (Exception ignored) {
-            // use updater in lib
-            new GuizhanBuildsUpdater(this, getFile(), getGithubUser(), getGithubRepo(), getGithubBranch()).start();
+        if (getPluginVersion().startsWith("DEV")) {
+            String path = getGithubUser() + "/" + getGithubRepo() + "/" + getGithubBranch();
+            new GitHubBuildsUpdater(this, getFile(), path).start();
+        } else if (getPluginVersion().startsWith("Build")) {
+            try {
+                // use updater in lib plugin
+                Class<?> clazz = Class.forName("net.guizhanss.guizhanlibplugin.updater.GuizhanUpdater");
+                Method updaterStart = clazz.getDeclaredMethod("start", Plugin.class, File.class, String.class, String.class, String.class);
+                updaterStart.invoke(null, this, getFile(), getGithubUser(), getGithubRepo(), getGithubBranch());
+            } catch (Exception ignored) {
+                // use updater in lib
+                new GuizhanBuildsUpdater(this, getFile(), getGithubUser(), getGithubRepo(), getGithubBranch()).start();
+            }
         }
     }
 }
