@@ -2,8 +2,23 @@ categories:
   main: "&a鬼斩&b科技"
   material: "&a鬼斩&b科技 &7- &e材料"
   magic: "&a鬼斩&b科技 &7- &e魔法"
+  generator: "&a鬼斩&b科技 &7- &e发电机"
   machine: "&a鬼斩&b科技 &7- &e机器"
+recipes:
+  fe_unknown:
+    name: "&b失落帝国科技"
+    lore:
+      - "&7这些建筑物使用极其"
+      - "&7先进的奥术技术，"
+      - "&7甚至失落帝国都已经"
+      - "&7忘记如何建造它们。"
 items:
+  class_4_singularity:
+    name: "&6四级奇点"
+    lore:
+      - "&7&o虽然经历了如此漫长的岁月，"
+      - "&7&o隔离场却仍能正常稳定的运行，"
+      - "&7&o没人知道原因。"
   electric_spawner_framework:
     name: "&e电力刷怪笼框架"
     lore:
@@ -17,8 +32,11 @@ items:
       - ""
       - "&7可进行不消耗电力的手动合成"
 lores:
-  per-craft: "&7每次合成"
-  per-use: "&7每次使用"
+  per-tick: " &7每粘液刻"
+  per-craft: " &7每次合成"
+  per-use: " &7每次使用"
+  generator: "&e&l发电机"
+  machine: "&b&l机器"
 researches:
   electric_spawner_assembler: "电力刷怪笼组装机"
 gui:
@@ -66,5 +84,5 @@ commands:
       usage: "&b/sfs repaired <玩家名称> <生物类型>"
       description: "&a给予指定玩家指定类型的已修复的刷怪笼"
   unloadchunk:
-    success: "&aYou have disable the force loading of the chunk you are standing on!"
-    not-force-loaded: "&cThe chunk you are standing on is not force loaded!"
+    success: "&a你已禁用所在区块的强制加载！"
+    not-force-loaded: "&c你所在的区块没有强制加载！"

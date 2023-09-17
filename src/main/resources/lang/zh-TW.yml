@@ -2,8 +2,23 @@ categories:
   main: "&a鬼斬&b科技"
   material: "&a鬼斬&b科技 &7- &e材料"
   magic: "&a鬼斬&b科技 &7- &e魔法"
+  generator: "&aGuizhan&bCraft &7- &eGenerator"
   machine: "&a鬼斬&b科技 &7- &e機器"
+recipes:
+  fe_unknown:
+    name: "&bFallen Empire Technology"
+    lore:
+      - "&7These buildings use incredibly"
+      - "&7advanced arcane technology,"
+      - "&7even the fallen empires have"
+      - "&7forgotten how to build these."
 items:
+  class_4_singularity:
+    name: "&6Class-4 Singularity"
+    lore:
+      - "&7&oEven after all this time,"
+      - "&7&othe containment fields remain stable."
+      - "&7&oNo one understands how."
   electric_spawner_framework:
     name: "&e電力生怪磚框架"
     lore:
@@ -17,8 +32,11 @@ items:
       - ""
       - "&7可進行不消耗電力的手動合成"
 lores:
-  per-craft: "&7每次合成"
-  per-use: "&7每次使用"
+  per-tick: " &7per Slimefun tick"
+  per-craft: " &7per craft"
+  per-use: " &7per use"
+  generator: "&e&lGenerator"
+  machine: "&b&lMachine"
 researches:
   electric_spawner_assembler: "電力生怪磚組裝機"
 gui:
