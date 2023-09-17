@@ -22,8 +22,6 @@ body:
           required: true
         - label: You did not modify the jar file
           required: true
-        - label: You do not have CS-CoreLib installed
-          required: true
         - label: You searched existing issues, and could not find any existing bug report on this
           required: true
 
@@ -98,30 +96,13 @@ body:
     validations:
       required: true
 
-  - type: dropdown
+  - type: input
     id: minecraft-version
     attributes:
       label: Minecraft Version
-      description: Please select your Minecraft Version
-      options:
-        - 1.19.x
-        - 1.18.x
-        - 1.17.x
-        - 1.16.x
-        - Older versions are not supported
+      description: Please provide your Minecraft Version
     validations:
       required: true
-
-  - type: checkboxes
-    id: cscorelib-version
-    attributes:
-      label: CS-CoreLib Version
-      description: |
-        As of Jan 30 2021，Slimefun and addons don't need CS-CoreLib any more.
-        Keep CS-CoreLib in your server could cause problems.
-      options:
-        - label: I don't have CS-CoreLib installed
-          required: true
 
   - type: textarea
     id: slimefun-version
@@ -139,7 +120,6 @@ body:
       label: Plugin version
       description: |
         Please specify the plugin version
-        For files download from Guizhan Builds, only the number after `Build` in version string is needed.
-        (Type `7` if the version is `Build 7 zh-CN(ybw0014) (git 9ef7fee)`)
+        (e.g. Build 1 (git 114x514))
     validations:
       required: true

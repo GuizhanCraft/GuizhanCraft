@@ -6,7 +6,7 @@ GuizhanCraft is a Slimefun4 addon made by ybw0014.
 
 ### Generators
 
-- Class-4 Singularity
+- Class-4 Singularity: A generator that can produce a large amount of energy and cannot be crafted.
 
 ### Machines
 
