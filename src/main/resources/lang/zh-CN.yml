@@ -2,23 +2,23 @@ categories:
   main: "&a鬼斩&b科技"
   material: "&a鬼斩&b科技 &7- &e材料"
   magic: "&a鬼斩&b科技 &7- &e魔法"
-  generator: "&aGuizhan&bCraft &7- &eGenerator"
+  generator: "&a鬼斩&b科技 &7- &e发电机"
   machine: "&a鬼斩&b科技 &7- &e机器"
 recipes:
   fe_unknown:
-    name: "&bFallen Empire Technology"
+    name: "&b失落帝国科技"
     lore:
-      - "&7These buildings use incredibly"
-      - "&7advanced arcane technology,"
-      - "&7even the fallen empires have"
-      - "&7forgotten how to build these."
+      - "&7这些建筑物使用极其"
+      - "&7先进的奥术技术，"
+      - "&7甚至失落帝国都已经"
+      - "&7忘记如何建造它们。"
 items:
   class_4_singularity:
-    name: "&6Class-4 Singularity"
+    name: "&6四级奇点"
     lore:
-      - "&7&oEven after all this time,"
-      - "&7&othe containment fields remain stable."
-      - "&7&oNo one understands how."
+      - "&7&o虽然经历了如此漫长的岁月，"
+      - "&7&o隔离场却仍能正常稳定的运行，"
+      - "&7&o没人知道原因。"
   electric_spawner_framework:
     name: "&e电力刷怪笼框架"
     lore:
@@ -32,11 +32,11 @@ items:
       - ""
       - "&7可进行不消耗电力的手动合成"
 lores:
-  per-tick: " &7per Slimefun tick"
-  per-craft: " &7per craft"
-  per-use: " &7per use"
-  generator: "&e&lGenerator"
-  machine: "&b&lMachine"
+  per-tick: " &7每粘液刻"
+  per-craft: " &7每次合成"
+  per-use: " &7每次使用"
+  generator: "&e&l发电机"
+  machine: "&b&l机器"
 researches:
   electric_spawner_assembler: "电力刷怪笼组装机"
 gui:
