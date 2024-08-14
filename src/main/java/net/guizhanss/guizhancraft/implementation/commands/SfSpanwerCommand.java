@@ -15,7 +15,7 @@ import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 import io.github.thebusybiscuit.slimefun4.implementation.items.blocks.AbstractMonsterSpawner;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 
-import net.guizhanss.guizhancraft.implementation.GuizhanCraft;
+import net.guizhanss.guizhancraft.GuizhanCraft;
 import net.guizhanss.guizhanlib.java.IntegerHelper;
 import net.guizhanss.guizhanlib.minecraft.helper.inventory.ItemStackHelper;
 import net.guizhanss.guizhanlib.minecraft.utils.InventoryUtil;

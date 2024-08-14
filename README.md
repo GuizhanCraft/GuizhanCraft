@@ -1,7 +1,7 @@
 # GuizhanCraft - 鬼斩科技
 
-A Slimefun addon made by ybw0014. It provides a solution for those servers that installed Slimefun texture pack and cannot craft electric spawners. It also adds some new items.
-由鬼斩编写的粘液科技附属插件。为安装了粘液科技材质包但无法合成电动刷怪笼的服务器提供了解决方案。同时添加了一些新物品。
+A Slimefun addon made by ybw0014. It provides a solution for those servers that installed Slimefun texture pack and cannot craft electric spawners. It also adds some new items that are useful for testers (only obtainable through cheat).  
+由鬼斩编写的粘液科技附属插件。为安装了粘液科技材质包但无法合成电动刷怪笼的服务器提供了解决方案。同时添加了一些适用于服务器测试的新物品（仅作弊模式可获得）。
 
 # Download / 下载
 
@@ -12,7 +12,7 @@ This addon can be downloaded from Guizhan Builds page:
 
 ## Introduction / 介绍
 
-[English (United States)](/documents/intro-en-US.md)  
+[English (US)](/documents/intro-en-US.md)  
 [简体中文](/documents/intro-zh-CN.md)
 
 ## Supported language / 支持语言

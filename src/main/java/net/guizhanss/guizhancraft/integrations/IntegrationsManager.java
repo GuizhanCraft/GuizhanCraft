@@ -7,7 +7,7 @@ import javax.annotation.ParametersAreNonnullByDefault;
 
 import org.bukkit.plugin.Plugin;
 
-import net.guizhanss.guizhancraft.implementation.GuizhanCraft;
+import net.guizhanss.guizhancraft.GuizhanCraft;
 import net.guizhanss.guizhancraft.implementation.setup.ItemSetup;
 import net.guizhanss.guizhancraft.implementation.setup.ResearchSetup;
 

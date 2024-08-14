@@ -23,7 +23,7 @@ import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenuPreset;
 
-import net.guizhanss.guizhancraft.implementation.GuizhanCraft;
+import net.guizhanss.guizhancraft.GuizhanCraft;
 import net.guizhanss.guizhancraft.implementation.GuizhanCraftItems;
 import net.guizhanss.guizhancraft.utils.Debug;
 import net.guizhanss.guizhancraft.utils.GuiItems;
@@ -41,26 +41,13 @@ import net.guizhanss.guizhanlib.slimefun.machines.MenuBlock;
  */
 public class ElectricSpawnerAssembler extends MenuBlock {
 
-    // energy
-    public static final int ENERGY_CONSUMPTION = 32;
-
     // gui
-    private static final int[] BACKGROUND = {
-        0, 4, 8, 9, 17, 18, 20, 26,
-        27, 28, 29, 33, 34, 35,
-        36, 37, 38, 42, 43, 44,
-        45, 46, 47, 51, 52, 53
-    };
-    private static final int[] INPUT_BACKGROUND = {
-        1, 2, 3, 5, 6, 7, 10, 12, 14, 16, 19, 20, 21, 23, 24, 25
-    };
-    private static final int[] OUTPUT_BACKGROUND = {
-        30, 31, 32, 39, 41, 48, 49, 50
-    };
+    private static final int[] BACKGROUND = {0, 4, 8, 9, 17, 18, 20, 26, 27, 28, 29, 33, 34, 35, 36, 37, 38, 42, 43, 44, 45, 46, 47, 51, 52, 53};
+    private static final int[] INPUT_BACKGROUND = {1, 2, 3, 5, 6, 7, 10, 12, 14, 16, 19, 20, 21, 23, 24, 25};
+    private static final int[] OUTPUT_BACKGROUND = {30, 31, 32, 39, 41, 48, 49, 50};
     private static final int INPUT_FRAMEWORK_SLOT = 11;
     private static final int INPUT_SPAWNER_SLOT = 15;
     private static final int OUTPUT_SLOT = 40;
-    private static final int STATUS_SLOT = 4;
     private static final int INFO_SLOT = 13;
     private static final int CRAFT_BUTTON = 22;
 
@@ -83,12 +70,12 @@ public class ElectricSpawnerAssembler extends MenuBlock {
 
     @Override
     protected int[] getInputSlots() {
-        return new int[] { INPUT_FRAMEWORK_SLOT, INPUT_SPAWNER_SLOT };
+        return new int[] {INPUT_FRAMEWORK_SLOT, INPUT_SPAWNER_SLOT};
     }
 
     @Override
     protected int[] getOutputSlots() {
-        return new int[] { OUTPUT_SLOT };
+        return new int[] {OUTPUT_SLOT};
     }
 
     @Override

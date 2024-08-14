@@ -1,6 +1,6 @@
 package net.guizhanss.guizhancraft.utils;
 
-import net.guizhanss.guizhancraft.implementation.GuizhanCraft;
+import net.guizhanss.guizhancraft.GuizhanCraft;
 
 import lombok.experimental.UtilityClass;
 

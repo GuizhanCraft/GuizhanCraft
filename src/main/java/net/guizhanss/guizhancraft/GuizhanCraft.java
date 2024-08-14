@@ -1,4 +1,4 @@
-package net.guizhanss.guizhancraft.implementation;
+package net.guizhanss.guizhancraft;
 
 import java.io.File;
 import java.lang.reflect.Method;

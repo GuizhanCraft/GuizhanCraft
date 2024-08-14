@@ -17,8 +17,7 @@ public class EternalGenerator extends SlimefunItem implements EnergyNetProvider 
 
     private final int generation;
 
-    public EternalGenerator(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe,
-                            int generation) {
+    public EternalGenerator(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe, int generation) {
         super(itemGroup, item, recipeType, recipe);
         this.generation = generation;
     }

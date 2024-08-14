@@ -13,6 +13,7 @@ import io.github.thebusybiscuit.slimefun4.implementation.items.blocks.Unplaceabl
  * @author ybw0014
  */
 public class SimpleMaterial extends UnplaceableBlock {
+
     public SimpleMaterial(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
         super(itemGroup, item, recipeType, recipe);
     }

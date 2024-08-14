@@ -6,7 +6,7 @@ import io.github.thebusybiscuit.slimefun4.api.items.groups.SubItemGroup;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
 
-import net.guizhanss.guizhancraft.implementation.GuizhanCraft;
+import net.guizhanss.guizhancraft.GuizhanCraft;
 import net.guizhanss.guizhancraft.utils.HeadTextures;
 import net.guizhanss.guizhancraft.utils.Keys;
 

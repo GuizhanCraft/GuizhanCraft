@@ -1,7 +1,5 @@
 package net.guizhanss.guizhancraft.implementation.setup;
 
-import net.guizhanss.guizhancraft.utils.Constants;
-
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
@@ -9,12 +7,14 @@ import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 
+import net.guizhanss.guizhancraft.GuizhanCraft;
 import net.guizhanss.guizhancraft.core.recipes.GuizhanCraftRecipeTypes;
-import net.guizhanss.guizhancraft.implementation.GuizhanCraft;
 import net.guizhanss.guizhancraft.implementation.GuizhanCraftItems;
 import net.guizhanss.guizhancraft.implementation.items.generator.EternalGenerator;
 import net.guizhanss.guizhancraft.implementation.items.machine.ElectricSpawnerAssembler;
+import net.guizhanss.guizhancraft.implementation.items.machine.SimpleMaterialReplicator;
 import net.guizhanss.guizhancraft.implementation.items.material.SimpleMaterial;
+import net.guizhanss.guizhancraft.utils.Constants;
 
 import lombok.experimental.UtilityClass;
 
@@ -25,6 +25,7 @@ import lombok.experimental.UtilityClass;
  */
 @UtilityClass
 public final class ItemSetup {
+
     public static void setup() {
         GuizhanCraft plugin = GuizhanCraft.getInstance();
 
@@ -35,6 +36,13 @@ public final class ItemSetup {
             GuizhanCraftRecipeTypes.FE_UNKNOWN,
             new ItemStack[9],
             Constants.CLASS_4_SINGULARITY_GENERATION.getValue()
+        ).register(plugin);
+
+        new SimpleMaterialReplicator(
+            GuizhanCraftItemGroups.MACHINE,
+            GuizhanCraftItems.DIMENSIONAL_FABRICATOR,
+            GuizhanCraftRecipeTypes.FE_UNKNOWN,
+            new ItemStack[9]
         ).register(plugin);
         // endregion Generator
     }

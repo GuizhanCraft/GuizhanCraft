@@ -1,14 +1,13 @@
 package net.guizhanss.guizhancraft.implementation;
 
-import io.github.thebusybiscuit.slimefun4.utils.LoreBuilder;
-
-import net.guizhanss.guizhancraft.utils.Constants;
-
 import org.bukkit.Material;
 
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
+import io.github.thebusybiscuit.slimefun4.utils.LoreBuilder;
 
+import net.guizhanss.guizhancraft.GuizhanCraft;
 import net.guizhanss.guizhancraft.core.items.LocalizedItemStack;
+import net.guizhanss.guizhancraft.utils.Constants;
 
 import lombok.experimental.UtilityClass;
 
@@ -19,6 +18,7 @@ import lombok.experimental.UtilityClass;
  */
 @UtilityClass
 public final class GuizhanCraftItems {
+
     // region Materials
     public static final SlimefunItemStack ELECTRIC_SPAWNER_FRAMEWORK = new LocalizedItemStack(
         "ELECTRIC_SPAWNER_FRAMEWORK",
@@ -41,6 +41,10 @@ public final class GuizhanCraftItems {
     public static final SlimefunItemStack ELECTRIC_SPAWNER_ASSEMBLER = new LocalizedItemStack(
         "ELECTRIC_SPAWNER_ASSEMBLER",
         Material.CRAFTING_TABLE
+    );
+    public static final SlimefunItemStack DIMENSIONAL_FABRICATOR = new LocalizedItemStack(
+        "DIMENSIONAL_FABRICATOR",
+        Material.BLAST_FURNACE
     );
     // endregion Machine
 

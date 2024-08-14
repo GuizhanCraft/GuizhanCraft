@@ -6,7 +6,7 @@ import com.google.common.base.Preconditions;
 
 import org.bukkit.NamespacedKey;
 
-import net.guizhanss.guizhancraft.implementation.GuizhanCraft;
+import net.guizhanss.guizhancraft.GuizhanCraft;
 
 import lombok.experimental.UtilityClass;
 

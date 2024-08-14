@@ -11,7 +11,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 
 import net.guizhanss.guizhancraft.core.services.LocalizationService;
-import net.guizhanss.guizhancraft.implementation.GuizhanCraft;
+import net.guizhanss.guizhancraft.GuizhanCraft;
 import net.guizhanss.guizhancraft.utils.Utils;
 import net.guizhanss.guizhanlib.minecraft.utils.ChatUtil;
 

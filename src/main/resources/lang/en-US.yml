@@ -33,6 +33,18 @@ items:
       - "&7and Reinforced Spawner"
       - ""
       - "&7Can manually craft without consuming energy"
+  auto_forge:
+    name: "&eAuto Forge"
+    lore:
+      - "&7&oThe expansive nano-replicator bays"
+      - "&7&oin this forge transform raw materials"
+      - "&7&ointo advanced allots with marvelous efficiency."
+  dimensional_fabricator:
+    name: "&eDimensional Fabricator"
+    lore:
+      - "&7&oThis advanced fabricator seamlessly tunnels"
+      - "&7&ointo the fabric of dimensional space,"
+      - "&7&oextracting valueable resources."
 
 lores:
   per-tick: " &7per Slimefun tick"
@@ -92,5 +104,5 @@ commands:
       usage: "&b/sfs repaired <player> <entity type> [amount]"
       description: "&aGive player reinforced spawner with specified entity type."
   unloadchunk:
-    success: "&aYou have disable the force loading of the chunk you are standing on!"
+    success: "&aYou have disabled the force loading of the chunk you are standing on!"
     not-force-loaded: "&cThe chunk you are standing on is not force loaded!"

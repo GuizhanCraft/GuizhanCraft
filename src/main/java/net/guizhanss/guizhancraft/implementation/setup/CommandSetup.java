@@ -1,6 +1,6 @@
 package net.guizhanss.guizhancraft.implementation.setup;
 
-import net.guizhanss.guizhancraft.implementation.GuizhanCraft;
+import net.guizhanss.guizhancraft.GuizhanCraft;
 import net.guizhanss.guizhancraft.implementation.commands.SfSpanwerCommand;
 import net.guizhanss.guizhancraft.implementation.commands.SfSpawnerCompleter;
 import net.guizhanss.guizhancraft.implementation.commands.UnloadChunkCommand;

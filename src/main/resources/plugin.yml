@@ -1,6 +1,6 @@
 name: GuizhanCraft
 version: '${project.version}'
-main: net.guizhanss.guizhancraft.implementation.GuizhanCraft
+main: net.guizhanss.guizhancraft.GuizhanCraft
 api-version: 1.16
 authors: [ ybw0014 ]
 description: A Slimefun Addon
