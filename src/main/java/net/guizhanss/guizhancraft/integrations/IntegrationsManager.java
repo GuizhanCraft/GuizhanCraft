@@ -14,6 +14,7 @@ import net.guizhanss.guizhancraft.implementation.setup.ResearchSetup;
 import lombok.Getter;
 
 public final class IntegrationsManager {
+
     private final GuizhanCraft plugin;
 
     @Getter

@@ -4,6 +4,7 @@ import lombok.experimental.UtilityClass;
 
 @UtilityClass
 public final class HeadTextures {
+
     // https://minecraft-heads.com/custom-heads/monsters/4500-poro
     public static final String GROUP_MAIN = "15561bc0c5fa8e59f0799a24ce1bae7f43f1c4f330b3af8c663943a50623fa9";
     // https://minecraft-heads.com/custom-heads/decoration/63053-machine-part

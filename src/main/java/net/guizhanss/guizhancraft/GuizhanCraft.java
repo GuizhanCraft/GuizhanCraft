@@ -7,10 +7,10 @@ import java.util.logging.Level;
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 
-import io.github.thebusybiscuit.slimefun4.libraries.dough.updater.GitHubBuildsUpdater;
-
 import org.bukkit.configuration.Configuration;
 import org.bukkit.plugin.Plugin;
+
+import io.github.thebusybiscuit.slimefun4.libraries.dough.updater.BlobBuildUpdater;
 
 import net.guizhanss.guizhancraft.core.services.LocalizationService;
 import net.guizhanss.guizhancraft.implementation.setup.CommandSetup;
@@ -121,18 +121,23 @@ public final class GuizhanCraft extends AbstractAddon {
 
     @Override
     protected void autoUpdate() {
-        if (getPluginVersion().startsWith("DEV")) {
-            String path = getGithubUser() + "/" + getGithubRepo() + "/" + getGithubBranch();
-            new GitHubBuildsUpdater(this, getFile(), path).start();
+        if (getPluginVersion().startsWith("Dev")) {
+            new BlobBuildUpdater(this, getFile(), getGithubRepo()).start();
         } else if (getPluginVersion().startsWith("Build")) {
             try {
                 // use updater in lib plugin
-                Class<?> clazz = Class.forName("net.guizhanss.guizhanlibplugin.updater.GuizhanUpdater");
+
+                // this little trick because maven shade plugin will change strings
+                char[] pluginPackage = {
+                    'n', 'e', 't', '.', 'g', 'u', 'i', 'z', 'h', 'a', 'n', 's', 's', '.',
+                    'g', 'u', 'i', 'z', 'h', 'a', 'n', 'l', 'i', 'b', 'p', 'l', 'u', 'g', 'i', 'n'
+                };
+                Class<?> clazz = Class.forName(new String(pluginPackage) + ".updater.GuizhanUpdater");
                 Method updaterStart = clazz.getDeclaredMethod("start", Plugin.class, File.class, String.class, String.class, String.class);
                 updaterStart.invoke(null, this, getFile(), getGithubUser(), getGithubRepo(), getGithubBranch());
             } catch (Exception ignored) {
                 // use updater in lib
-                new GuizhanBuildsUpdater(this, getFile(), getGithubUser(), getGithubRepo(), getGithubBranch()).start();
+                GuizhanBuildsUpdater.start(this, getFile(), getGithubUser(), getGithubRepo(), getGithubBranch());
             }
         }
     }

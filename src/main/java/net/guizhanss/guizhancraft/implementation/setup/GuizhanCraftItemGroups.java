@@ -19,6 +19,7 @@ import lombok.experimental.UtilityClass;
  */
 @UtilityClass
 final class GuizhanCraftItemGroups {
+
     public static final NestedItemGroup MAIN = new NestedItemGroup(
         Keys.getCategory("main"),
         new CustomItemStack(

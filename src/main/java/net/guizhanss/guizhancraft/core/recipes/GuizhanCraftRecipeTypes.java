@@ -17,6 +17,7 @@ import lombok.experimental.UtilityClass;
  */
 @UtilityClass
 public final class GuizhanCraftRecipeTypes {
+
     public static final RecipeType FE_UNKNOWN = new RecipeType(
         Keys.get("fe_unknown"),
         new CustomItemStack(

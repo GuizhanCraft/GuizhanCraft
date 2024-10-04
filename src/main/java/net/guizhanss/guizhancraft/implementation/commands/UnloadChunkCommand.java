@@ -3,40 +3,44 @@ package net.guizhanss.guizhancraft.implementation.commands;
 import javax.annotation.ParametersAreNonnullByDefault;
 
 import org.bukkit.Chunk;
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.command.PluginCommand;
 import org.bukkit.entity.Player;
 
 import net.guizhanss.guizhancraft.GuizhanCraft;
+import net.guizhanss.guizhanlib.minecraft.commands.BaseCommand;
 
-public class UnloadChunkCommand implements CommandExecutor {
+/**
+ * Command /unloadchunk
+ *
+ * @author ybw0014
+ */
+public final class UnloadChunkCommand extends BaseCommand {
+
+    @ParametersAreNonnullByDefault
+    public UnloadChunkCommand(PluginCommand command) {
+        super(command, (cmd, sender) -> GuizhanCraft.getLocalization().getString("commands." + cmd + ".description"), "");
+    }
 
     @Override
     @ParametersAreNonnullByDefault
-    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if (!sender.isOp() && !sender.hasPermission("guizhancraft.commands.unloadchunk")) {
+    public void onExecute(CommandSender sender, String[] args) {
+        if (!sender.hasPermission("guizhancraft.commands.unloadchunk")) {
             GuizhanCraft.getLocalization().sendMessage(sender, "no-permission");
-            return true;
+            return;
         }
 
         if (!(sender instanceof Player player)) {
             GuizhanCraft.getLocalization().sendMessage(sender, "no-console");
-            return true;
+            return;
         }
 
-        if (args.length == 0) {
-            Chunk chunk = player.getLocation().getChunk();
-            if (chunk.isForceLoaded()) {
-                chunk.setForceLoaded(false);
-                GuizhanCraft.getLocalization().send(sender, "commands.unloadchunk.success");
-            } else {
-                GuizhanCraft.getLocalization().send(sender, "commands.unloadchunk.not-force-loaded");
-            }
+        Chunk chunk = player.getLocation().getChunk();
+        if (chunk.isForceLoaded()) {
+            chunk.setForceLoaded(false);
+            GuizhanCraft.getLocalization().send(sender, "commands.unloadchunk.success");
         } else {
-            GuizhanCraft.getLocalization().sendMessage(sender, "usage", "/unloadchunk");
+            GuizhanCraft.getLocalization().send(sender, "commands.unloadchunk.not-force-loaded");
         }
-        return true;
     }
-
 }

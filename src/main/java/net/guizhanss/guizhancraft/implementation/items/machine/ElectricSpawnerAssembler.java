@@ -17,6 +17,7 @@ import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.implementation.items.blocks.RepairedSpawner;
+import io.github.thebusybiscuit.slimefun4.libraries.dough.items.ItemUtils;
 import io.github.thebusybiscuit.slimefun4.utils.ChestMenuUtils;
 import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
 
@@ -28,7 +29,6 @@ import net.guizhanss.guizhancraft.implementation.GuizhanCraftItems;
 import net.guizhanss.guizhancraft.utils.Debug;
 import net.guizhanss.guizhancraft.utils.GuiItems;
 import net.guizhanss.guizhancraft.utils.Utils;
-import net.guizhanss.guizhanlib.minecraft.helper.inventory.ItemStackHelper;
 import net.guizhanss.guizhanlib.slimefun.machines.MenuBlock;
 
 /**
@@ -42,9 +42,9 @@ import net.guizhanss.guizhanlib.slimefun.machines.MenuBlock;
 public class ElectricSpawnerAssembler extends MenuBlock {
 
     // gui
-    private static final int[] BACKGROUND = {0, 4, 8, 9, 17, 18, 20, 26, 27, 28, 29, 33, 34, 35, 36, 37, 38, 42, 43, 44, 45, 46, 47, 51, 52, 53};
-    private static final int[] INPUT_BACKGROUND = {1, 2, 3, 5, 6, 7, 10, 12, 14, 16, 19, 20, 21, 23, 24, 25};
-    private static final int[] OUTPUT_BACKGROUND = {30, 31, 32, 39, 41, 48, 49, 50};
+    private static final int[] BACKGROUND = { 0, 4, 8, 9, 17, 18, 20, 26, 27, 28, 29, 33, 34, 35, 36, 37, 38, 42, 43, 44, 45, 46, 47, 51, 52, 53 };
+    private static final int[] INPUT_BACKGROUND = { 1, 2, 3, 5, 6, 7, 10, 12, 14, 16, 19, 20, 21, 23, 24, 25 };
+    private static final int[] OUTPUT_BACKGROUND = { 30, 31, 32, 39, 41, 48, 49, 50 };
     private static final int INPUT_FRAMEWORK_SLOT = 11;
     private static final int INPUT_SPAWNER_SLOT = 15;
     private static final int OUTPUT_SLOT = 40;
@@ -70,12 +70,12 @@ public class ElectricSpawnerAssembler extends MenuBlock {
 
     @Override
     protected int[] getInputSlots() {
-        return new int[] {INPUT_FRAMEWORK_SLOT, INPUT_SPAWNER_SLOT};
+        return new int[] { INPUT_FRAMEWORK_SLOT, INPUT_SPAWNER_SLOT };
     }
 
     @Override
     protected int[] getOutputSlots() {
-        return new int[] {OUTPUT_SLOT};
+        return new int[] { OUTPUT_SLOT };
     }
 
     @Override
@@ -97,7 +97,7 @@ public class ElectricSpawnerAssembler extends MenuBlock {
 
     private void manualCraft(@Nonnull BlockMenu blockMenu, @Nonnull Player p) {
         if (craft(blockMenu)) {
-            String itemName = ItemStackHelper.getDisplayName(blockMenu.getItemInSlot(OUTPUT_SLOT));
+            String itemName = ItemUtils.getItemName(blockMenu.getItemInSlot(OUTPUT_SLOT));
             GuizhanCraft.getLocalization().sendMessage(p, "crafted", itemName);
         } else {
             GuizhanCraft.getLocalization().sendMessage(p, "not-crafted");
@@ -152,7 +152,7 @@ public class ElectricSpawnerAssembler extends MenuBlock {
         if (!Utils.checkItemStack(framework)) {
             return false;
         }
-        if (!SlimefunUtils.isItemSimilar(framework, GuizhanCraftItems.ELECTRIC_SPAWNER_FRAMEWORK, true, false)) {
+        if (!SlimefunUtils.isItemSimilar(framework, GuizhanCraftItems.ELECTRIC_SPAWNER_FRAMEWORK, false, false)) {
             return false;
         }
 

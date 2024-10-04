@@ -8,6 +8,7 @@ depend:
   - Slimefun
 softdepend:
   - ElectricSpawners
+  - GuizhanLibPlugin
 commands:
   sfspawner:
     description: /sfspawner

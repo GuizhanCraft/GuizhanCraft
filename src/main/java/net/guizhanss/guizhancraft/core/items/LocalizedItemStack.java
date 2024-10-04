@@ -1,23 +1,21 @@
 package net.guizhanss.guizhancraft.core.items;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.annotation.ParametersAreNonnullByDefault;
 
 import org.bukkit.Material;
-import org.bukkit.inventory.meta.ItemMeta;
 
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 
-import net.guizhanss.guizhancraft.core.services.LocalizationService;
 import net.guizhanss.guizhancraft.GuizhanCraft;
+import net.guizhanss.guizhancraft.core.services.LocalizationService;
 import net.guizhanss.guizhancraft.utils.Utils;
-import net.guizhanss.guizhanlib.minecraft.utils.ChatUtil;
+import net.guizhanss.guizhanlib.minecraft.utils.ItemUtil;
 
 /**
  * An extended {@link SlimefunItemStack} that integrates
  * {@link LocalizationService}.
+ *
+ * TODO: refactor this class to a util class for 1.21
  *
  * @author ybw0014
  */
@@ -43,7 +41,7 @@ public class LocalizedItemStack extends SlimefunItemStack {
             GuizhanCraft.getLocalization().getItemLore(id)
         );
 
-        appendLore(appendLore);
+        ItemUtil.appendLore(this, appendLore);
     }
 
     @ParametersAreNonnullByDefault
@@ -65,22 +63,6 @@ public class LocalizedItemStack extends SlimefunItemStack {
             GuizhanCraft.getLocalization().getItemLore(id)
         );
 
-        appendLore(appendLore);
-    }
-
-    @ParametersAreNonnullByDefault
-    private void appendLore(String... lores) {
-        ItemMeta im = getItemMeta();
-        List<String> lore;
-        if (im.hasLore()) {
-            lore = im.getLore();
-        } else {
-            lore = new ArrayList<>();
-        }
-        for (String line : lores) {
-            lore.add(ChatUtil.color(line));
-        }
-        im.setLore(lore);
-        setItemMeta(im);
+        ItemUtil.appendLore(this, appendLore);
     }
 }

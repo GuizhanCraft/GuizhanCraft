@@ -37,14 +37,16 @@ public final class ItemSetup {
             new ItemStack[9],
             Constants.CLASS_4_SINGULARITY_GENERATION.getValue()
         ).register(plugin);
+        // endregion Generator
 
+        // region Item Generator
         new SimpleMaterialReplicator(
             GuizhanCraftItemGroups.MACHINE,
             GuizhanCraftItems.DIMENSIONAL_FABRICATOR,
             GuizhanCraftRecipeTypes.FE_UNKNOWN,
             new ItemStack[9]
         ).register(plugin);
-        // endregion Generator
+        // endregion Item Generator
     }
 
     public static void setupElectricSpawners() {

@@ -94,6 +94,7 @@ console:
 
 commands:
   sfspawner:
+    description: "Provide the Slimefun spawner with specified mob type to the player."
     invalid-entity-type: "&cInvalid entity type: {0}"
     sent: "&b{0} &ahas been given &b{1}"
     received: "&aYou received &b{1} &afrom &b{0}"
@@ -104,5 +105,6 @@ commands:
       usage: "&b/sfs repaired <player> <entity type> [amount]"
       description: "&aGive player reinforced spawner with specified entity type."
   unloadchunk:
+    description: "Disable the force loading of the current chunk."
     success: "&aYou have disabled the force loading of the chunk you are standing on!"
     not-force-loaded: "&cThe chunk you are standing on is not force loaded!"

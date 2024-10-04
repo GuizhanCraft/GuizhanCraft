@@ -1,26 +1,24 @@
 package net.guizhanss.guizhancraft.implementation.items.machine;
 
-import io.github.thebusybiscuit.slimefun4.utils.ChestMenuUtils;
-
-import net.guizhanss.guizhancraft.utils.Utils;
-
 import org.bukkit.block.Block;
 import org.bukkit.inventory.ItemStack;
 
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
+import io.github.thebusybiscuit.slimefun4.utils.ChestMenuUtils;
 
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenuPreset;
 
+import net.guizhanss.guizhancraft.utils.Utils;
 import net.guizhanss.guizhanlib.slimefun.machines.TickingMenuBlock;
 
 public class SimpleMaterialReplicator extends TickingMenuBlock {
 
     private static final int INPUT_SLOT = 0;
-    private static final int[] OUTPUT_BORDER = {1};
-    private static final int[] OUTPUT_SLOTS = {2, 3, 4, 5, 6, 7, 8};
+    private static final int[] OUTPUT_BORDER = { 1 };
+    private static final int[] OUTPUT_SLOTS = { 2, 3, 4, 5, 6, 7, 8 };
 
     public SimpleMaterialReplicator(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
         super(itemGroup, item, recipeType, recipe);
@@ -34,7 +32,7 @@ public class SimpleMaterialReplicator extends TickingMenuBlock {
 
     @Override
     protected int[] getInputSlots() {
-        return new int[] {INPUT_SLOT};
+        return new int[] { INPUT_SLOT };
     }
 
     @Override
