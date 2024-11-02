@@ -31,6 +31,18 @@ items:
       - "&7组装电力刷怪笼"
       - ""
       - "&7可进行不消耗电力的手动合成"
+  auto_forge:
+    name: "&eAuto Forge"
+    lore:
+      - "&7&oThe expansive nano-replicator bays"
+      - "&7&oin this forge transform raw materials"
+      - "&7&ointo advanced allots with marvelous efficiency."
+  dimensional_fabricator:
+    name: "&eDimensional Fabricator"
+    lore:
+      - "&7&oThis advanced fabricator seamlessly tunnels"
+      - "&7&ointo the fabric of dimensional space,"
+      - "&7&oextracting valueable resources."
 lores:
   per-tick: " &7每粘液刻"
   per-craft: " &7每次合成"
@@ -74,6 +86,7 @@ console:
   loaded_integration: "已关联插件 {0} v{1}"
 commands:
   sfspawner:
+    description: "Provide the Slimefun spawner with specified mob type to the player."
     invalid-entity-type: "&c无效的生物类型: {0}"
     sent: "&b{0} &a已获得 &b{1}"
     received: "&a你收到了来自 &b{0} &a的 &b{1}"
@@ -84,4 +97,6 @@ commands:
       usage: "&b/sfs repaired <玩家名称> <生物类型>"
       description: "&a给予指定玩家指定类型的已修复的刷怪笼"
   unloadchunk:
+    description: "Disable the force loading of the current chunk."
+    success: "&aYou have disabled the force loading of the chunk you are standing on!"
     not-force-loaded: "&c你所在的区块没有强制加载！"
