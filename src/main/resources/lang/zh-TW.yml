@@ -31,6 +31,18 @@ items:
       - "&7組裝電力生怪磚"
       - ""
       - "&7可進行不消耗電力的手動合成"
+  auto_forge:
+    name: "&eAuto Forge"
+    lore:
+      - "&7&oThe expansive nano-replicator bays"
+      - "&7&oin this forge transform raw materials"
+      - "&7&ointo advanced allots with marvelous efficiency."
+  dimensional_fabricator:
+    name: "&eDimensional Fabricator"
+    lore:
+      - "&7&oThis advanced fabricator seamlessly tunnels"
+      - "&7&ointo the fabric of dimensional space,"
+      - "&7&oextracting valueable resources."
 lores:
   per-tick: " &7per Slimefun tick"
   per-craft: " &7per craft"
@@ -74,6 +86,7 @@ console:
   loaded_integration: "已關聯插件 {0} v{1}"
 commands:
   sfspawner:
+    description: "Provide the Slimefun spawner with specified mob type to the player."
     invalid-entity-type: "&c無效的生物類型: {0}"
     sent: "&b{0} &a已獲得 &b{1}"
     received: "&a你收到了來自 &b{0} &a的 &b{1}"
@@ -84,5 +97,6 @@ commands:
       usage: "&b/sfs repaired <玩家名稱> <生物類型>"
       description: "&a給予指定玩家指定類型的已修復的生怪磚"
   unloadchunk:
-    success: "&aYou have disable the force loading of the chunk you are standing on!"
+    description: "Disable the force loading of the current chunk."
+    success: "&aYou have disabled the force loading of the chunk you are standing on!"
     not-force-loaded: "&cThe chunk you are standing on is not force loaded!"
