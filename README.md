@@ -30,16 +30,17 @@ You can change the language in `config.yml`. Supported languages:
 
 ### Machines
 
-- Electric Spawner Assembler：You can assemble electric spawner with electric spawner framework and a reinforced spawner. (Only when ElectricSpawner is installed)
+- Electric Spawner Assembler：You can assemble electric spawner with electric spawner framework and a reinforced
+  spawner. (Only when ElectricSpawner is installed)
 - Dimensional Fabricator: Infinitely replicate the specified item. (Obtainable by cheat menu / command only)
 
 ### Commands
 
 Parameters: `<>` is required, `[]` is optional
 
-| Command                                            | Description                                                  | Required permission                 |
-|----------------------------------------------------|--------------------------------------------------------------|-------------------------------------|
-| /sfspawner broken <player> <entityType> [amount]   | Give player a broken spawner with specified entity type.     | `guizhancraft.commands.sfspawner`   |
-| /sfspawner repaired <player> <entityType> [amount] | Give player a reinforced spawner with specified entity type. | `guizhancraft.commands.sfspawner`   |
-| /unloadchunk                                       | Disable the force load of the chunk you are standing on.     | `guizhancraft.commands.unloadchunk` |
+| Command                                            | Description                                                                                | Required permission                 |
+|----------------------------------------------------|--------------------------------------------------------------------------------------------|-------------------------------------|
+| /sfspawner broken <player> <entityType> [amount]   | Give player a broken spawner with specified entity type.                                   | `guizhancraft.commands.sfspawner`   |
+| /sfspawner repaired <player> <entityType> [amount] | Give player a reinforced spawner with specified entity type.                               | `guizhancraft.commands.sfspawner`   |
+| /unloadchunk                                       | Disable the force load of the chunk you are standing on (not really unload current chunk). | `guizhancraft.commands.unloadchunk` |
 
