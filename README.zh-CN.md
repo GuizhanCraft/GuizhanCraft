@@ -34,8 +34,8 @@
 
 参数：`<>` 为必填项， `[]` 为可选项
 
-| 命令                                                 | 描述                  | 所需权限                                |
-|----------------------------------------------------|---------------------|-------------------------------------|
-| /sfspawner broken <player> <entityType> [amount]   | 给玩家提供指定实体类型的破损的刷怪笼。 | `guizhancraft.commands.sfspawner`   |
-| /sfspawner repaired <player> <entityType> [amount] | 给玩家提供指定实体类型的修复的刷怪笼。 | `guizhancraft.commands.sfspawner`   |
-| /unloadchunk                                       | 禁用当前区块的强制加载。        | `guizhancraft.commands.unloadchunk` |
+| 命令                                                 | 描述                     | 所需权限                                |
+|----------------------------------------------------|------------------------|-------------------------------------|
+| /sfspawner broken <player> <entityType> [amount]   | 给玩家提供指定实体类型的破损的刷怪笼。    | `guizhancraft.commands.sfspawner`   |
+| /sfspawner repaired <player> <entityType> [amount] | 给玩家提供指定实体类型的修复的刷怪笼。    | `guizhancraft.commands.sfspawner`   |
+| /unloadchunk                                       | 禁用当前区块的强制加载（并不会卸载该区块）。 | `guizhancraft.commands.unloadchunk` |

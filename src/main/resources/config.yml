@@ -1,6 +1,3 @@
-# DO NOT change this
-version: 2
-
 # Debug mode
 debug: false
 

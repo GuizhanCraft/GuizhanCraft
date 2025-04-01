@@ -1,12 +1,30 @@
-categories:
-  main: "&aGuizhan&bCraft"
-  material: "&aGuizhan&bCraft &7- &eMaterials"
-  magic: "&aGuizhan&bCraft &7- &eMagic"
-  generator: "&aGuizhan&bCraft &7- &eGenerator"
-  machine: "&aGuizhan&bCraft &7- &eMachines"
+items:
+  # item groups
+  GROUP_MAIN:
+    conditions:
+      force-load: true
+    name: "&aGuizhan&bCraft"
+  GROUP_MATERIALS:
+    conditions:
+      force-load: true
+    name: "&aGuizhan&bCraft &7- &eMaterials"
+  GROUP_MAGIC:
+    conditions:
+      force-load: true
+    name: "&aGuizhan&bCraft &7- &eMagic"
+  GROUP_GENERATORS:
+    conditions:
+      force-load: true
+    name: "&aGuizhan&bCraft &7- &eGenerator"
+  GROUP_MACHINES:
+    conditions:
+      force-load: true
+    name: "&aGuizhan&bCraft &7- &eMachines"
 
-recipes:
-  fe_unknown:
+  # recipes
+  RECIPE_FE_UNKNOWN:
+    conditions:
+      force-load: true
     name: "&bFallen Empire Technology"
     lore:
       - "&7These buildings use incredibly"
@@ -14,18 +32,34 @@ recipes:
       - "&7even the fallen empires have"
       - "&7forgotten how to build these."
 
-items:
-  class_4_singularity:
+  # gui items
+  UI_CRAFT:
+    conditions:
+      force-load: true
+    name: "&7Click to &6Craft"
+  UI_ELECTRIC_SPAWNER_ASSEMBLER_INFO:
+    conditions:
+      force-load: true
+    name: "&eInformation"
+    lore:
+      - "&7Put &eElectric Spawner Framework &7on left side"
+      - "&7Put &eReinforced Spawner &7on right side"
+      - ""
+      - "&7Click the button below to craft once"
+      - "&7(no energy required)"
+
+  # items
+  CLASS_4_SINGULARITY:
     name: "&6Class-4 Singularity"
     lore:
       - "&7&oEven after all this time,"
       - "&7&othe containment fields remain stable."
       - "&7&oNo one understands how."
-  electric_spawner_framework:
+  ELECTRIC_SPAWNER_FRAMEWORK:
     name: "&eElectric Spawner Framework"
     lore:
       - "&7Something is missing..."
-  electric_spawner_assembler:
+  ELECTRIC_SPAWNER_ASSEMBLER:
     name: "&eElectric Spawner &aAssembler"
     lore:
       - "&7Craft electric spawner"
@@ -33,13 +67,13 @@ items:
       - "&7and Reinforced Spawner"
       - ""
       - "&7Can manually craft without consuming energy"
-  auto_forge:
+  AUTO_FORGE:
     name: "&eAuto Forge"
     lore:
       - "&7&oThe expansive nano-replicator bays"
       - "&7&oin this forge transform raw materials"
       - "&7&ointo advanced allots with marvelous efficiency."
-  dimensional_fabricator:
+  DIMENSIONAL_FABRICATOR:
     name: "&eDimensional Fabricator"
     lore:
       - "&7&oThis advanced fabricator seamlessly tunnels"
@@ -54,23 +88,7 @@ lores:
   machine: "&b&lMachine"
 
 researches:
-  electric_spawner_assembler: "Electric Spawner Assembler"
-
-gui:
-  craft: "&aClick to craft"
-  not-enough-energy: "&cNot enough energy"
-  no-input: "&cNot enough input"
-  no-output-space: "&cNo output space"
-  success: "&aSuccess!"
-  electric_spawner_assembler:
-    info:
-      name: "&eInformation"
-      lore:
-        - "&7Put &eElectric Spawner Framework &7on left side"
-        - "&7Put &eReinforced Spawner &7on right side"
-        - ""
-        - "&7Click the button below to craft once"
-        - "&7(no energy required)"
+  electric-spawner-assembler: "Electric Spawner Assembler"
 
 messages:
   no-permission: "&4You do not have permission!"
@@ -78,33 +96,22 @@ messages:
   usage: "&eUsage: &a{0}"
   player-not-found: "&cCannot find player {0}!"
   invalid-recipe: "&cInvalid recipe!"
-  no-input: "&cInsufficient input materials!"
-  no-output-space: "&cNot enough output space!"
-  crafted: "&aSuccessfully crafted &e{0}&a!"
-  not-crafted: "&cFailed to craft: &e{0}&c!"
-
-console:
-  loaded_language: "Current language is English (United States)!"
-  loading_items: "Loading items..."
-  loading_commands: "Loading commands..."
-  loading_researches: "Researches are enabled, loading researches..."
-  loading_integrations: "Loading integrations..."
-  loading_integration: "Loading integration plugin {0}"
-  loaded_integration: "Integrated with plugin {0} v{1}"
+  not-enough-space: "&cNot enough output space!"
+  commands:
+    sfspawner:
+      invalid-entity-type: "&cInvalid entity type: {0}"
+      sent: "&b{0} &ahas been given &b{1}"
+      received: "&aYou received &b{1} &afrom &b{0}"
+      broken:
+        usage: "&b/sfs broken <player> <entity type> [amount]"
+        description: "&aGive player broken spawner with specified entity type."
+      repaired:
+        usage: "&b/sfs repaired <player> <entity type> [amount]"
+        description: "&aGive player reinforced spawner with specified entity type."
+    unloadchunk:
+      success: "&aYou have disabled the force loading of the chunk you are standing on!"
+      not-force-loaded: "&cThe chunk you are standing on is not force loaded!"
 
 commands:
-  sfspawner:
-    description: "Provide the Slimefun spawner with specified mob type to the player."
-    invalid-entity-type: "&cInvalid entity type: {0}"
-    sent: "&b{0} &ahas been given &b{1}"
-    received: "&aYou received &b{1} &afrom &b{0}"
-    broken:
-      usage: "&b/sfs broken <player> <entity type> [amount]"
-      description: "&aGive player broken spawner with specified entity type."
-    repaired:
-      usage: "&b/sfs repaired <player> <entity type> [amount]"
-      description: "&aGive player reinforced spawner with specified entity type."
-  unloadchunk:
-    description: "Disable the force loading of the current chunk."
-    success: "&aYou have disabled the force loading of the chunk you are standing on!"
-    not-force-loaded: "&cThe chunk you are standing on is not force loaded!"
+  sfspawner: "Provide the Slimefun spawner with specified mob type to the player."
+  unloadchunk: "Disable the force loading of the current chunk."
