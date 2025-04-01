@@ -1,43 +1,76 @@
-categories:
-  main: "&a鬼斬&b科技"
-  material: "&a鬼斬&b科技 &7- &e材料"
-  magic: "&a鬼斬&b科技 &7- &e魔法"
-  generator: "&aGuizhan&bCraft &7- &eGenerator"
-  machine: "&a鬼斬&b科技 &7- &e機器"
-recipes:
-  fe_unknown:
+items:
+  #item groups
+  GROUP_MAIN:
+    conditions:
+      force-load: true
+    name: "&aGuizhan&bCraft"
+  GROUP_MATERIALS:
+    conditions:
+      force-load: true
+    name: "&aGuizhan&bCraft &7- &eMaterials"
+  GROUP_MAGIC:
+    conditions:
+      force-load: true
+    name: "&aGuizhan&bCraft &7- &eMagic"
+  GROUP_GENERATORS:
+    conditions:
+      force-load: true
+    name: "&aGuizhan&bCraft &7- &eGenerator"
+  GROUP_MACHINES:
+    conditions:
+      force-load: true
+    name: "&aGuizhan&bCraft &7- &eMachines"
+  #recipes
+  RECIPE_FE_UNKNOWN:
+    conditions:
+      force-load: true
     name: "&bFallen Empire Technology"
     lore:
       - "&7These buildings use incredibly"
       - "&7advanced arcane technology,"
       - "&7even the fallen empires have"
       - "&7forgotten how to build these."
-items:
-  class_4_singularity:
+  #gui items
+  UI_CRAFT:
+    conditions:
+      force-load: true
+    name: "&7Click to &6Craft"
+  UI_ELECTRIC_SPAWNER_ASSEMBLER_INFO:
+    conditions:
+      force-load: true
+    name: "&eInformation"
+    lore:
+      - "&7Put &eElectric Spawner Framework &7on left side"
+      - "&7Put &eReinforced Spawner &7on right side"
+      - ""
+      - "&7Click the button below to craft once"
+      - "&7(no energy required)"
+  #items
+  CLASS_4_SINGULARITY:
     name: "&6Class-4 Singularity"
     lore:
       - "&7&oEven after all this time,"
       - "&7&othe containment fields remain stable."
       - "&7&oNo one understands how."
-  electric_spawner_framework:
-    name: "&e電力生怪磚框架"
+  ELECTRIC_SPAWNER_FRAMEWORK:
+    name: "&eElectric Spawner Framework"
     lore:
-      - "&7好像差了點什麽..."
-  electric_spawner_assembler:
-    name: "&e電力生怪磚&a組裝機"
+      - "&7Something is missing..."
+  ELECTRIC_SPAWNER_ASSEMBLER:
+    name: "&eElectric Spawner &aAssembler"
     lore:
-      - "&7可以用電力生怪磚框架"
-      - "&7和已修復的生怪磚"
-      - "&7組裝電力生怪磚"
+      - "&7Craft electric spawner"
+      - "&7with Electric Spawner Framework"
+      - "&7and Reinforced Spawner"
       - ""
-      - "&7可進行不消耗電力的手動合成"
-  auto_forge:
+      - "&7Can manually craft without consuming energy"
+  AUTO_FORGE:
     name: "&eAuto Forge"
     lore:
       - "&7&oThe expansive nano-replicator bays"
       - "&7&oin this forge transform raw materials"
       - "&7&ointo advanced allots with marvelous efficiency."
-  dimensional_fabricator:
+  DIMENSIONAL_FABRICATOR:
     name: "&eDimensional Fabricator"
     lore:
       - "&7&oThis advanced fabricator seamlessly tunnels"
@@ -50,53 +83,28 @@ lores:
   generator: "&e&lGenerator"
   machine: "&b&lMachine"
 researches:
-  electric_spawner_assembler: "電力生怪磚組裝機"
-gui:
-  craft: "&a點擊合成"
-  not-enough-energy: "&c電力不足"
-  no-input: "&c缺少輸入"
-  no-output-space: "&c輸出空間不足"
-  success: "&a成功!"
-  electric_spawner_assembler:
-    info:
-      name: "&e說明"
-      lore:
-        - "&7在左側放入&e電力生怪磚框架"
-        - "&7在右側放入&e已修復的生怪磚"
-        - ""
-        - "&7點擊下方的按鈕可手動合成一次"
-        - "&7(無需電力)"
+  electric-spawner-assembler: "Electric Spawner Assembler"
 messages:
   no-permission: "&4你沒有權限!"
   no-console: "&4只有玩家才能執行該指令!"
   usage: "&e用法: &a{0}"
   player-not-found: "&c找不到指定玩家 {0}!"
   invalid-recipe: "&c無效的配方!"
-  no-input: "&c請在所有輸入欄放入物品!"
-  no-output-space: "&c輸出空間不足!"
-  crafted: "&a成功合成&e{0}&a!"
-  not-crafted: "&c合成失败:&e{0}&c!"
-console:
-  loaded_language: "當前語言為繁體中文!"
-  loading_items: "加載物品中..."
-  loading_commands: "加載指令中..."
-  loading_researches: "研究已啟用, 加載研究中..."
-  loading_integrations: "加載關聯插件中..."
-  loading_integration: "正在關聯插件 {0}"
-  loaded_integration: "已關聯插件 {0} v{1}"
+  not-enough-space: "&cNot enough output space!"
+  commands:
+    sfspawner:
+      invalid-entity-type: "&cInvalid entity type: {0}"
+      sent: "&b{0} &ahas been given &b{1}"
+      received: "&aYou received &b{1} &afrom &b{0}"
+      broken:
+        usage: "&b/sfs broken <player> <entity type> [amount]"
+        description: "&aGive player broken spawner with specified entity type."
+      repaired:
+        usage: "&b/sfs repaired <player> <entity type> [amount]"
+        description: "&aGive player reinforced spawner with specified entity type."
+    unloadchunk:
+      success: "&aYou have disabled the force loading of the chunk you are standing on!"
+      not-force-loaded: "&cThe chunk you are standing on is not force loaded!"
 commands:
-  sfspawner:
-    description: "Provide the Slimefun spawner with specified mob type to the player."
-    invalid-entity-type: "&c無效的生物類型: {0}"
-    sent: "&b{0} &a已獲得 &b{1}"
-    received: "&a你收到了來自 &b{0} &a的 &b{1}"
-    broken:
-      usage: "&b/sfs broken <玩家名稱> <生物類型>"
-      description: "&a給予指定玩家指定類型的已損壞的生怪磚"
-    repaired:
-      usage: "&b/sfs repaired <玩家名稱> <生物類型>"
-      description: "&a給予指定玩家指定類型的已修復的生怪磚"
-  unloadchunk:
-    description: "Disable the force loading of the current chunk."
-    success: "&aYou have disabled the force loading of the chunk you are standing on!"
-    not-force-loaded: "&cThe chunk you are standing on is not force loaded!"
+  sfspawner: "Provide the Slimefun spawner with specified mob type to the player."
+  unloadchunk: "Disable the force loading of the current chunk."
